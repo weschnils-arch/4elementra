@@ -62,7 +62,7 @@ const Header: React.FC = () => {
                         </button>
                     </div>
 
-                    <a href="#kontakt" className={`btn btn-primary-outline ${styles.ctaBtn}`}>
+                    <a href="#kontakt" className={`btn btn-primary ${styles.ctaBtn}`}>
                         {t.header.cta}
                     </a>
                 </nav>
