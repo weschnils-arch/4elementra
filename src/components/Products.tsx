@@ -139,6 +139,15 @@ const Products: React.FC = () => {
                                             </span>
                                         </div>
 
+                                        <div className={styles.frontImageWrapper}>
+                                            <Image
+                                                src={imageMap[key as string] || '/images/products/UNIVERSAL.png'}
+                                                alt={product.name}
+                                                fill
+                                                style={{ objectFit: 'contain', padding: '10px' }}
+                                            />
+                                        </div>
+
                                         <p className={styles.productDescription}>{product.desc}</p>
 
                                         <div className={styles.tags}>
