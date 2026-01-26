@@ -1,0 +1,409 @@
+/* Section Layout */
+.comparison {
+    background: var(--white);
+    padding: 100px 0;
+    position: relative;
+}
+
+.comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(226, 0, 116, 0.2) 15%,
+            var(--magenta) 50%,
+            rgba(226, 0, 116, 0.2) 85%,
+            transparent 100%);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--magenta);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700;
+    color: var(--anthracite);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Column Styling */
+.column {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.columnNatural {
+    border: 2px solid rgba(0, 180, 100, 0.2);
+}
+
+.columnChemical {
+    border: 2px solid rgba(200, 50, 50, 0.15);
+}
+
+/* Column Header */
+.columnHeader {
+    padding: 24px 28px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    color: var(--white);
+}
+
+.badgeChemical {
+    background: linear-gradient(135deg, #666, #888);
+}
+
+.columnTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--anthracite);
+    margin: 0;
+}
+
+/* Image Styling */
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.imageOverlayNatural {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0, 180, 100, 0.1) 100%);
+    pointer-events: none;
+}
+
+.imageOverlayChemical {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(100, 50, 50, 0.1) 100%);
+    pointer-events: none;
+}
+
+/* Benefits List */
+.benefitsList,
+.drawbacksList {
+    list-style: none;
+    padding: 24px 28px 28px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.benefitItem,
+.drawbackItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--anthracite);
+    transition: background 0.2s ease;
+    padding: 8px 12px;
+    margin: -8px -12px;
+    border-radius: 8px;
+}
+
+.benefitItem:hover,
+.drawbackItem:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.checkIcon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00B464, #00D477);
+    border-radius: 50%;
+    color: white;
+}
+
+.crossIcon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #C83232, #E04545);
+    border-radius: 50%;
+    color: white;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .comparison {
+        padding: 80px 0;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .grid {
+        gap: 24px;
+    }
+
+    .columnHeader {
+        padding: 20px 24px 12px;
+    }
+
+    .benefitsList,
+    .drawbacksList {
+        padding: 20px 24px 24px;
+        gap: 12px;
+    }
+
+    .benefitItem,
+    .drawbackItem {
+        font-size: 0.875rem;
+    }
+
+    .imageWrapper {
+        height: 180px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .comparison {
+        padding: 60px 0;
+    }
+
+    .header {
+        margin-bottom: 40px;
+        padding: 0 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 16px;
+    }
+
+    .column {
+        border-radius: 12px;
+    }
+
+    .columnHeader {
+        padding: 20px 20px 12px;
+    }
+
+    .columnTitle {
+        font-size: 1.125rem;
+    }
+
+    .imageWrapper {
+        height: 200px;
+    }
+
+    .benefitsList,
+    .drawbacksList {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .benefitItem,
+    .drawbackItem {
+        font-size: 0.8125rem;
+        gap: 10px;
+        padding: 6px 8px;
+        margin: -6px -8px;
+    }
+
+    .checkIcon,
+    .crossIcon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .checkIcon svg,
+    .crossIcon svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .comparison {
+        padding: 48px 0;
+    }
+
+    .header {
+        margin-bottom: 32px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .grid {
+        gap: 24px;
+        padding: 0 12px;
+    }
+
+    .columnHeader {
+        padding: 16px 16px 10px;
+    }
+
+    .badge {
+        font-size: 0.5625rem;
+        padding: 4px 8px;
+    }
+
+    .columnTitle {
+        font-size: 1rem;
+    }
+
+    .imageWrapper {
+        height: 160px;
+    }
+
+    .benefitsList,
+    .drawbacksList {
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .benefitItem,
+    .drawbackItem {
+        font-size: 0.75rem;
+    }
+
+    .checkIcon,
+    .crossIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* CTA Section */
+.ctaSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    gap: 48px;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.divider {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--magenta) 20%,
+            var(--magenta) 80%,
+            transparent 100%);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive CTA */
+@media (max-width: 768px) {
+    .ctaSection {
+        margin-top: 48px;
+        gap: 40px;
+    }
+
+    .divider {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ctaSection {
+        margin-top: 40px;
+        gap: 32px;
+    }
+
+    .divider {
+        width: 120px;
+    }
+}

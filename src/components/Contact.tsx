@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import styles from './Contact.module.css';
 
@@ -61,52 +62,14 @@ const Contact: React.FC = () => {
                             {t.contact.desc}
                         </p>
 
-                        <div className={styles.contactInfo}>
-                            <div className={styles.infoItem}>
-                                <div className={styles.infoIcon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                        <polyline points="22,6 12,13 2,6" />
-                                    </svg>
-                                </div>
-                                <div className={styles.infoContent}>
-                                    <span className={styles.infoLabel}>E-Mail</span>
-                                    <a href="mailto:office@4elementra.com" className={styles.infoValue}>
-                                        office@4elementra.com
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className={styles.infoItem}>
-                                <div className={styles.infoIcon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                                        <circle cx="12" cy="10" r="3" />
-                                    </svg>
-                                </div>
-                                <div className={styles.infoContent}>
-                                    <span className={styles.infoLabel}>{t.contact.labels.address || 'Adresse'}</span>
-                                    <address className={styles.infoValue}>
-                                        CL DOÑA CARMEN, FASE IV 0 Pta.F16<br />
-                                        29130 ALHAURÍN DE LA TORRE, MALAGA<br />
-                                        Spanien
-                                    </address>
-                                </div>
-                            </div>
-
-                            <div className={styles.infoItem}>
-                                <div className={styles.infoIcon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                                        <line x1="8" y1="21" x2="16" y2="21" />
-                                        <line x1="12" y1="17" x2="12" y2="21" />
-                                    </svg>
-                                </div>
-                                <div className={styles.infoContent}>
-                                    <span className={styles.infoLabel}>NIF</span>
-                                    <span className={styles.infoValue}>B75931493</span>
-                                </div>
-                            </div>
+                        {/* Contact Image */}
+                        <div className={styles.contactImageWrapper}>
+                            <Image
+                                src="/images/contact-image.jpg"
+                                alt="Greenkeeper bei der Rasenanalyse"
+                                fill
+                                style={{ objectFit: 'cover', objectPosition: 'top' }}
+                            />
                         </div>
                     </div>
 

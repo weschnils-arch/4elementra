@@ -6,11 +6,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .content {
     padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .eyebrow {
@@ -42,7 +45,19 @@
     font-size: 1.0625rem;
     color: var(--dark-gray);
     line-height: 1.7;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+}
+
+/* Contact Image */
+.contactImageWrapper {
+    position: relative;
+    width: 340px;
+    aspect-ratio: 3/4;
+    border-radius: 12px;
+    border: 3px solid var(--magenta);
+    overflow: hidden;
+    margin-top: 24px;
+    box-shadow: 0 8px 24px rgba(226, 0, 116, 0.15);
 }
 
 .contactInfo {

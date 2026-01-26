@@ -14,7 +14,7 @@ export const translations = {
         hero: {
             sport: {
                 badge: 'Sportrasen',
-                title: 'Bundesliga-Qualität.',
+                title: 'Bundesliga Qualität.',
                 titleHighlight: '100% Organisch.',
                 subtitle: 'Maximale Belastbarkeit für professionelle Spielstätten – 4 Spiele in 6 Tagen, kompromisslos nachhaltig.',
                 cta: 'Sportrasen-Lösungen',

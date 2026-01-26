@@ -34,9 +34,13 @@
 }
 
 .divider {
-    width: 60px;
-    height: 4px;
-    background: var(--magenta);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--magenta) 20%,
+            var(--magenta) 80%,
+            transparent 100%);
     border-radius: 2px;
     margin: 0 auto 24px;
 }
@@ -80,11 +84,12 @@
 
 .elementCard:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 0 0 2px var(--magenta), 0 0 20px rgba(226, 0, 116, 0.4);
 }
 
-.elementCard:hover::before {
-    transform: scaleX(1);
+/* Removed the top colored bar as requested */
+.elementCard::before {
+    display: none;
 }
 
 .iconWrapper {

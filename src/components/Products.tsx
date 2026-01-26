@@ -65,10 +65,10 @@ const Products: React.FC = () => {
             if (activeFilter === 'all') {
                 return 0;
             }
-            
+
             const productA = t.products.items[a] as ProductItem;
             const productB = t.products.items[b] as ProductItem;
-            
+
             // Department-specific products come first
             if (productA.category === activeFilter && productB.category !== activeFilter) {
                 return -1;
@@ -76,7 +76,7 @@ const Products: React.FC = () => {
             if (productA.category !== activeFilter && productB.category === activeFilter) {
                 return 1;
             }
-            
+
             // Maintain original order for products of the same category
             return 0;
         });
@@ -92,6 +92,17 @@ const Products: React.FC = () => {
             default:
                 return { title: t.products.links.headline, text: product.application };
         }
+    };
+
+    // Get the other two tabs that weren't clicked
+    const getOtherTabs = (key: string): { type: TabType; label: string }[] => {
+        const currentTab = activeTabs[key] || 'application';
+        const allTabs: { type: TabType; label: string }[] = [
+            { type: 'application', label: t.products.links.app },
+            { type: 'composition', label: t.products.links.comp },
+            { type: 'specifications', label: t.products.links.spec }
+        ];
+        return allTabs.filter(tab => tab.type !== currentTab);
     };
 
     return (
@@ -160,7 +171,7 @@ const Products: React.FC = () => {
                                             </span>
                                         </div>
 
-                                        <div className={styles.frontImageWrapper}>
+                                        <div className={`${styles.frontImageWrapper} ${styles.frontImageWrapperLarge}`}>
                                             <Image
                                                 src={imageMap[key as string] || '/images/products/UNIVERSAL.png'}
                                                 alt={product.name}
@@ -170,7 +181,6 @@ const Products: React.FC = () => {
                                         </div>
 
                                         <p className={styles.productDescription}>{product.desc}</p>
-
                                         <div className={styles.tags}>
                                             {product.tags && product.tags.map((tag, i) => (
                                                 <span key={i} className={styles.tag}>{tag}</span>
@@ -212,6 +222,19 @@ const Products: React.FC = () => {
                                                 <h4 className={styles.backHeadline}>{backContent.title}</h4>
                                             </div>
                                             <p className={styles.backText}>{backContent.text}</p>
+
+                                            {/* Navigation buttons for other tabs */}
+                                            <div className={styles.backCtaGroup}>
+                                                {getOtherTabs(key as string).map((tab) => (
+                                                    <button
+                                                        key={tab.type}
+                                                        className={styles.ctaSmall}
+                                                        onClick={() => handleFlip(key as string, tab.type)}
+                                                    >
+                                                        {tab.label}
+                                                    </button>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -25,7 +25,7 @@ const SplitHero: React.FC = () => {
                 <div className={styles.content}>
                     <span className={styles.badge}>{t.hero.sport.badge}</span>
                     <h1 className={styles.title}>
-                        {t.hero.sport.title}<br />
+                        <span className={styles.titleLine}>{t.hero.sport.title}</span><br />
                         <span className={styles.highlight}>{t.hero.sport.titleHighlight}</span>
                     </h1>
                     <p className={styles.subtitle}>
@@ -41,7 +41,7 @@ const SplitHero: React.FC = () => {
                             <span className={styles.statLabel}>{t.hero.stats.organic}</span>
                         </div>
                     </div>
-                    <a href="#sportrasen" className={`btn btn-primary btn-lg ${styles.cta}`}>
+                    <a href="#kontakt" className={`btn btn-primary btn-lg ${styles.cta}`}>
                         {t.hero.sport.cta}
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
@@ -72,7 +72,7 @@ const SplitHero: React.FC = () => {
                 <div className={styles.content}>
                     <span className={styles.badge}>{t.hero.golf.badge}</span>
                     <h1 className={styles.title}>
-                        {t.hero.golf.title}<br />
+                        <span className={styles.titleLine}>{t.hero.golf.title}</span><br />
                         <span className={styles.highlight}>{t.hero.golf.titleHighlight}</span>
                     </h1>
                     <p className={styles.subtitle}>
@@ -88,20 +88,12 @@ const SplitHero: React.FC = () => {
                             <span className={styles.statLabel}>{t.hero.stats.chemistry}</span>
                         </div>
                     </div>
-                    <a href="#golfrasen" className={`btn btn-primary btn-lg ${styles.cta}`}>
+                    <a href="#kontakt" className={`btn btn-primary btn-lg ${styles.cta}`}>
                         {t.hero.golf.cta}
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                </div>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div className={styles.scrollIndicator}>
-                <span>{t.hero.scroll}</span>
-                <div className={styles.scrollMouse}>
-                    <div className={styles.scrollWheel}></div>
                 </div>
             </div>
         </section>

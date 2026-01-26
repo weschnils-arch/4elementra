@@ -2,6 +2,15 @@
     background: linear-gradient(135deg, var(--anthracite-dark) 0%, var(--anthracite) 100%);
     color: var(--white);
     overflow: hidden;
+    padding: 120px 0;
+}
+
+/* CTA Button */
+.ctaButton {
+    margin-top: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .grid {
@@ -374,15 +383,38 @@
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        order: 1;
+    }
+
+    .eyebrow,
+    .title,
+    .description {
+        order: 1;
     }
 
     .diagram {
-        order: -1;
+        order: 2;
+    }
+
+    .featuresGrid {
+        order: 4;
+    }
+
+    .ctaButton {
+        order: 3;
+        align-self: center;
+        margin: 32px 0;
     }
 
     .diagramLayout {
         flex-direction: column-reverse;
-        /* Graphic on top on mobile, or keep side by side if possible? Stack is better */
         gap: 24px;
         margin-bottom: 32px;
     }

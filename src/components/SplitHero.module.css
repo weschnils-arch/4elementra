@@ -86,6 +86,11 @@
     margin-bottom: 20px;
 }
 
+.titleLine {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .highlight {
     background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
     -webkit-background-clip: text;
