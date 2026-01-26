@@ -55,10 +55,31 @@ const Products: React.FC = () => {
 
     const productKeys = Object.keys(t.products.items) as Array<keyof typeof t.products.items>;
 
-    const filteredKeys = productKeys.filter(key => {
-        const product = t.products.items[key] as ProductItem;
-        return activeFilter === 'all' || product.category === activeFilter || product.category === 'universal';
-    });
+    const filteredKeys = productKeys
+        .filter(key => {
+            const product = t.products.items[key] as ProductItem;
+            return activeFilter === 'all' || product.category === activeFilter || product.category === 'universal';
+        })
+        .sort((a, b) => {
+            // If showing all products, maintain original order
+            if (activeFilter === 'all') {
+                return 0;
+            }
+            
+            const productA = t.products.items[a] as ProductItem;
+            const productB = t.products.items[b] as ProductItem;
+            
+            // Department-specific products come first
+            if (productA.category === activeFilter && productB.category !== activeFilter) {
+                return -1;
+            }
+            if (productA.category !== activeFilter && productB.category === activeFilter) {
+                return 1;
+            }
+            
+            // Maintain original order for products of the same category
+            return 0;
+        });
 
     const getBackContent = (key: string, product: ProductItem) => {
         const tab = activeTabs[key] || 'application';
