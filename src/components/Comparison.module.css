@@ -183,9 +183,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #00B464, #00D477);
-    border-radius: 50%;
-    color: white;
+    background: transparent;
+    color: #00B464;
 }
 
 .crossIcon {
@@ -195,9 +194,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #C83232, #E04545);
-    border-radius: 50%;
-    color: white;
+    background: transparent;
+    color: #C83232;
 }
 
 /* Responsive - Tablet */
@@ -372,11 +370,12 @@
 
 .divider {
     width: 200px;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg,
             transparent 0%,
-            var(--magenta) 20%,
-            var(--magenta) 80%,
+            rgba(226, 0, 116, 0.2) 15%,
+            var(--magenta) 50%,
+            rgba(226, 0, 116, 0.2) 85%,
             transparent 100%);
     border-radius: 2px;
     position: absolute;
