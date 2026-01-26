@@ -46,16 +46,16 @@ const Header: React.FC = () => {
                         ))}
                     </ul>
 
-                    <div className="lang-switch">
+                    <div className={styles.langSwitch}>
                         <button
-                            className={`lang-btn ${language === 'de' ? 'active' : ''}`}
+                            className={`${styles.langBtn} ${language === 'de' ? styles.active : ''}`}
                             onClick={() => setLanguage('de')}
                         >
                             DE
                         </button>
-                        <span className="lang-sep">|</span>
+                        <span className={styles.langSep}>|</span>
                         <button
-                            className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+                            className={`${styles.langBtn} ${language === 'en' ? styles.active : ''}`}
                             onClick={() => setLanguage('en')}
                         >
                             ENG

@@ -188,3 +188,55 @@
         background: var(--white) !important;
     }
 }
+
+/* Language Switcher */
+.langSwitch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--white);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: color var(--transition-medium);
+    /* Added transition for smooth color change */
+}
+
+/* Correctly targeting .scrolled on header which is the parent/module class */
+/* In CSS modules: .header is local, but .scrolled is also local. */
+/* The JSX uses: className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`} */
+/* So .header.scrolled works within this file context. */
+.header.scrolled .langSwitch {
+    color: var(--anthracite);
+}
+
+.langBtn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 0.9rem;
+}
+
+.langBtn:hover,
+.langBtn.active {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.langSep {
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .langSwitch {
+        color: var(--white) !important;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
