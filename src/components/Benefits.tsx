@@ -54,7 +54,7 @@ const Benefits: React.FC = () => {
                 <div className={styles.header}>
                     <span className={styles.eyebrow}>{t.benefits.eyebrow}</span>
                     <h2 className={styles.title}>
-                        {t.benefits.title} <span className={styles.highlight}>4ELEMENTRA</span>?
+                        {t.benefits.title} <span className={styles.highlight}>4ELEMENTRA?</span>
                     </h2>
                     <p className={styles.subtitle}>
                         {t.benefits.subtitle}
