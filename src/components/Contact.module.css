@@ -1,0 +1,253 @@
+.contact {
+    background: var(--white);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.content {
+    padding-right: 40px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--magenta);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--anthracite);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.description {
+    font-size: 1.0625rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 48px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.infoItem {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.infoIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(226, 0, 116, 0.1), rgba(226, 0, 116, 0.05));
+    border-radius: var(--radius-sm);
+    color: var(--magenta);
+}
+
+.infoContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.infoLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+}
+
+.infoValue {
+    font-size: 1rem;
+    color: var(--anthracite);
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.infoValue:hover {
+    color: var(--magenta);
+}
+
+/* Form Styles */
+.formWrapper {
+    background: var(--off-white);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--anthracite);
+}
+
+.input,
+.select,
+.textarea {
+    padding: 14px 18px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--anthracite);
+    background: var(--white);
+    border: 2px solid var(--gray);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--magenta);
+    box-shadow: 0 0 0 3px rgba(226, 0, 116, 0.1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--dark-gray);
+}
+
+.select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 44px;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success Message */
+.successMessage {
+    text-align: center;
+    padding: 48px 24px;
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    border-radius: 50%;
+    color: var(--white);
+    animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.successMessage h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--anthracite);
+    margin-bottom: 8px;
+}
+
+.successMessage p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        gap: 48px;
+    }
+
+    .content {
+        padding-right: 0;
+    }
+
+    .formWrapper {
+        padding: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .formWrapper {
+        padding: 28px;
+    }
+}

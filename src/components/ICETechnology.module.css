@@ -1,0 +1,381 @@
+.iceTech {
+    background: linear-gradient(135deg, var(--anthracite-dark) 0%, var(--anthracite) 100%);
+    color: var(--white);
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.content {
+    padding-right: 40px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--magenta);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.description {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 48px;
+}
+
+.description strong {
+    color: var(--magenta);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.featureItem {
+    display: flex;
+    gap: 16px;
+}
+
+.featureNumber {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--magenta);
+    border: 2px solid var(--magenta);
+    border-radius: 50%;
+}
+
+.featureContent {
+    flex: 1;
+}
+
+.featureTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+}
+
+.featureDesc {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+/* Diagram Styles */
+.diagram {
+    position: relative;
+}
+
+.diagramWrapper {
+    position: relative;
+    aspect-ratio: 1;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, rgba(226, 0, 116, 0.15) 0%, transparent 60%);
+    border: 2px solid rgba(226, 0, 116, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cellNucleus {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-dark));
+    box-shadow: 0 0 40px rgba(226, 0, 116, 0.4);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.cellMembrane {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.particle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--magenta);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(226, 0, 116, 0.4);
+}
+
+.particle1 {
+    top: 15%;
+    left: 25%;
+    animation: float1 4s ease-in-out infinite;
+}
+
+.particle2 {
+    top: 25%;
+    right: 20%;
+    animation: float2 5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.particle3 {
+    bottom: 25%;
+    left: 20%;
+    animation: float3 4.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.particle4 {
+    bottom: 15%;
+    right: 25%;
+    animation: float4 5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes float1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 30px);
+    }
+}
+
+@keyframes float2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-15px, 25px);
+    }
+}
+
+@keyframes float3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(25px, -20px);
+    }
+}
+
+@keyframes float4 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-20px, -15px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.arrow {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--magenta));
+}
+
+.arrow1 {
+    top: 35%;
+    left: 30%;
+    transform: rotate(45deg);
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+
+.arrow2 {
+    top: 50%;
+    right: 30%;
+    transform: rotate(-30deg);
+    animation: arrowPulse 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.arrow3 {
+    bottom: 35%;
+    left: 45%;
+    transform: rotate(20deg);
+    animation: arrowPulse 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes arrowPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.diagramLabels {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 32px;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.labelDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.labelDotMagenta {
+    background: var(--magenta);
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 64px;
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--magenta);
+    margin-bottom: 8px;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        gap: 48px;
+    }
+
+    .content {
+        padding-right: 0;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diagram {
+        order: -1;
+    }
+
+    .diagramWrapper {
+        max-width: 300px;
+    }
+
+    .stats {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .statItem {
+        flex: 1;
+        min-width: 100px;
+    }
+}

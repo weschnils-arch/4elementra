@@ -1,0 +1,205 @@
+.philosophy {
+    background: var(--off-white);
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 80px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--magenta);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--anthracite);
+    margin-bottom: 24px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: var(--magenta);
+    border-radius: 2px;
+    margin: 0 auto 24px;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+}
+
+.elementsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.elementCard {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium);
+    overflow: hidden;
+}
+
+.elementCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--element-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-medium);
+}
+
+.elementCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.elementCard:hover::before {
+    transform: scaleX(1);
+}
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(226, 0, 116, 0.08), rgba(226, 0, 116, 0.02));
+    color: var(--magenta);
+    transition: all var(--transition-medium);
+}
+
+.elementCard:hover .iconWrapper {
+    background: var(--magenta);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.elementName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--anthracite);
+    margin-bottom: 12px;
+}
+
+.elementDesc {
+    font-size: 0.9375rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.cardNumber {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+}
+
+.coreMessage {
+    background: linear-gradient(135deg, var(--anthracite), var(--anthracite-dark));
+    border-radius: var(--radius-lg);
+    padding: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.coreMessage::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(226, 0, 116, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.messageInner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.quoteHighlight {
+    color: var(--magenta);
+}
+
+.messageText {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .elementsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coreMessage {
+        padding: 60px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .elementsGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .elementCard {
+        padding: 32px 24px;
+    }
+
+    .coreMessage {
+        padding: 48px 24px;
+        border-radius: var(--radius-md);
+    }
+
+    .quote {
+        font-size: 1.25rem;
+    }
+}
