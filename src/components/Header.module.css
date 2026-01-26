@@ -38,7 +38,10 @@
     transition: opacity var(--transition-fast);
 }
 
-/* Logo always stays magenta - no filter applied */
+.header:not(.scrolled) .logo img {
+    /* filter: brightness(0) invert(1); removed to keep magenta logo */
+    opacity: 1;
+}
 
 .nav {
     display: flex;
