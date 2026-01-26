@@ -13,6 +13,35 @@
     margin-right: auto;
 }
 
+.eyebrow {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--magenta);
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--anthracite);
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: var(--magenta);
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin: 0 auto;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
