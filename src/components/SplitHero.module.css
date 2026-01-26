@@ -278,15 +278,15 @@
     }
 
     .divider {
-        top: auto;
-        bottom: auto;
-        position: relative;
-        transform: none;
-        left: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
         flex-direction: row;
-        padding: 20px 0;
-        background: var(--anthracite-dark);
-        width: 100%;
+        padding: 0;
+        background: transparent;
+        width: auto;
+        z-index: 20;
     }
 
     .dividerLine {

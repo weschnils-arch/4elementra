@@ -61,7 +61,7 @@ const SplitHero: React.FC = () => {
             <div className={styles.side}>
                 <div className={styles.bgImage}>
                     <Image
-                        src="/images/golf/hero.jpg"
+                        src="/images/golf/hero.webp"
                         alt="Perfekter Golfrasen auf einem Green"
                         fill
                         priority
