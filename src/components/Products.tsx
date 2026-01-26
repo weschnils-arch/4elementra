@@ -11,26 +11,37 @@ interface ProductItem {
     desc: string;
     tags: string[];
     application: string;
+    composition?: string;
+    specifications?: string;
 }
+
+type TabType = 'application' | 'composition' | 'specifications';
 
 const Products: React.FC = () => {
     const [activeFilter, setActiveFilter] = useState<'all' | 'sport' | 'golf'>('all');
     const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
+    const [activeTabs, setActiveTabs] = useState<Record<string, TabType>>({});
     const { t } = useLanguage();
 
-    const toggleFlip = (key: string) => {
+    const handleFlip = (key: string, tab: TabType) => {
+        setActiveTabs(prev => ({ ...prev, [key]: tab }));
+        // Only flip if not already flipped, or just switch tab if flipped
         const newFlipped = new Set(flippedCards);
-        if (newFlipped.has(key)) {
-            newFlipped.delete(key);
-        } else {
+        if (!newFlipped.has(key)) {
             newFlipped.add(key);
+            setFlippedCards(newFlipped);
         }
+    };
+
+    const closeCard = (key: string) => {
+        const newFlipped = new Set(flippedCards);
+        newFlipped.delete(key);
         setFlippedCards(newFlipped);
     };
 
     const imageMap: Record<string, string> = {
         nitrogena: '/images/products/Nitrogena16.png',
-        nitrovita: '/images/products/UNIVERSAL.png', // Placeholder
+        nitrovita: '/images/products/UNIVERSAL.png',
         phosphor: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-PHOSPHORUS20.png',
         pk: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-PK2020.png',
         kalium: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-POTASSIUM.png',
@@ -48,6 +59,19 @@ const Products: React.FC = () => {
         const product = t.products.items[key] as ProductItem;
         return activeFilter === 'all' || product.category === activeFilter;
     });
+
+    const getBackContent = (key: string, product: ProductItem) => {
+        const tab = activeTabs[key] || 'application';
+        switch (tab) {
+            case 'composition':
+                return { title: t.products.links.comp, text: product.composition || 'N/A' };
+            case 'specifications':
+                return { title: t.products.links.spec, text: product.specifications || 'N/A' };
+            case 'application':
+            default:
+                return { title: t.products.links.headline, text: product.application };
+        }
+    };
 
     return (
         <section id="produkte" className={`section ${styles.products}`}>
@@ -87,6 +111,7 @@ const Products: React.FC = () => {
                     {filteredKeys.map((key) => {
                         const product = t.products.items[key] as ProductItem;
                         const isFlipped = flippedCards.has(key as string);
+                        const backContent = getBackContent(key as string, product);
 
                         return (
                             <div
@@ -97,22 +122,21 @@ const Products: React.FC = () => {
                                     {/* FRONT SIDE */}
                                     <div className={styles.cardFront}>
                                         <div className={styles.cardHeader}>
-                                            <h3 className={styles.productName}>{product.name}</h3>
-                                            <div className={styles.badgeGroup}>
-                                                <div className={styles.qrIcon} onClick={() => console.log('QR Click')}>
-                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                        <rect x="3" y="3" width="7" height="7" />
-                                                        <rect x="14" y="3" width="7" height="7" />
-                                                        <rect x="3" y="14" width="7" height="7" />
-                                                        <rect x="14" y="14" width="3" height="3" />
-                                                        <path d="M17 17h4v4h-4z" />
+                                            <div className={styles.headerLeft}>
+                                                <h3 className={styles.productName}>{product.name}</h3>
+                                                <div className={styles.qrIcon} onClick={(e) => { e.stopPropagation(); console.log('QR Click'); }}>
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                                        <rect x="3" y="14" width="7" height="7"></rect>
                                                     </svg>
                                                 </div>
-                                                <span className={`${styles.categoryBadge} ${styles[product.category]}`}>
-                                                    {/* @ts-ignore */}
-                                                    {t.products.categories[product.category]}
-                                                </span>
                                             </div>
+                                            <span className={`${styles.categoryBadge} ${styles[product.category]}`}>
+                                                {/* @ts-ignore */}
+                                                {t.products.categories[product.category]}
+                                            </span>
                                         </div>
 
                                         <p className={styles.productDescription}>{product.desc}</p>
@@ -123,17 +147,23 @@ const Products: React.FC = () => {
                                             ))}
                                         </div>
 
-                                        <div className={styles.links}>
-                                            <button className={styles.textLink} onClick={() => toggleFlip(key as string)}>{t.products.links.app}</button>
-                                            <button className={styles.textLink} onClick={() => toggleFlip(key as string)}>{t.products.links.comp}</button>
-                                            <button className={styles.textLink} onClick={() => toggleFlip(key as string)}>{t.products.links.spec}</button>
+                                        <div className={styles.ctaGroup}>
+                                            <button className={styles.ctaSmall} onClick={() => handleFlip(key as string, 'application')}>
+                                                {t.products.links.app}
+                                            </button>
+                                            <button className={styles.ctaSmall} onClick={() => handleFlip(key as string, 'composition')}>
+                                                {t.products.links.comp}
+                                            </button>
+                                            <button className={styles.ctaSmall} onClick={() => handleFlip(key as string, 'specifications')}>
+                                                {t.products.links.spec}
+                                            </button>
                                         </div>
                                     </div>
 
                                     {/* BACK SIDE */}
                                     <div className={styles.cardBack}>
                                         <div className={styles.backNav}>
-                                            <button className={styles.backLink} onClick={() => toggleFlip(key as string)}>
+                                            <button className={styles.backLink} onClick={() => closeCard(key as string)}>
                                                 ← {t.products.links.back}
                                             </button>
                                         </div>
@@ -143,30 +173,21 @@ const Products: React.FC = () => {
                                                 src={imageMap[key as string] || '/images/products/UNIVERSAL.png'}
                                                 alt={product.name}
                                                 fill
-                                                style={{ objectFit: 'contain', padding: '20px' }}
+                                                style={{ objectFit: 'contain', padding: '10px' }}
                                             />
                                         </div>
 
                                         <div className={styles.backContent}>
                                             <div className={styles.backHeader}>
-                                                <h4 className={styles.backHeadline}>{t.products.links.headline}</h4>
+                                                <h4 className={styles.backHeadline}>{backContent.title}</h4>
                                             </div>
-                                            <p className={styles.backText}>{product.application}</p>
+                                            <p className={styles.backText}>{backContent.text}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         );
                     })}
-                </div>
-
-                <div className={styles.cta}>
-                    <p className={styles.ctaText}>
-                        {t.products.ctaText}
-                    </p>
-                    <a href="#kontakt" className="btn btn-primary">
-                        {t.products.cta}
-                    </a>
                 </div>
             </div>
         </section>

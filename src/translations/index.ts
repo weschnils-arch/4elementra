@@ -94,77 +94,99 @@ export const translations = {
                     category: 'universal',
                     desc: 'Stickstoff-Blattdünger für intensive Grünfärbung und gesundes Wachstum.',
                     tags: ['Rasenstart', 'Wachstumsphase', 'Regeneration'],
-                    application: 'Dosierung: 2–3 kg/ha pro 400–600 l Wasser. Intervall: Alle 2–4 Wochen. Vorteil: Langsame, gleichmäßige Stickstofffreisetzung – sicher für Rasenflächen, kein Verbrennungsrisiko.'
+                    application: 'Dosierung: 20–30 l/ha in 400–600 l Wasser. Alle 2–4 Wochen anwenden für gleichmäßige N-Versorgung.',
+                    composition: '16% Gesamtstickstoff (N), davon 50% schnell verfügbar, 50% organisch gebunden.',
+                    specifications: 'pH-Wert: 6.5, Dichte: 1.18 g/cm³, Gebinde: 10L Kanister.'
                 },
                 nitrovita: {
                     name: 'Nitrovita 12',
                     category: 'universal',
                     desc: 'Stickstoff-Granulat für langanhaltende Versorgung.',
                     tags: ['Langzeitwirkung', 'Basisversorgung', 'Bodenaktivität'],
-                    application: 'Dosierung: 20-30 g/m². Anwendung während der gesamten Wachstumsperiode möglich. Sorgt für gleichmäßigen Wuchs ohne Stoßwachstum.'
+                    application: 'Aufwandmenge: 25-35 g/m². Nach der Ausbringung beregnen. Wirkungsdauer: 8-10 Wochen.',
+                    composition: '12% N, 4% MgO, 40% organische Substanz. Fein granuliert.',
+                    specifications: 'Körnung: 1-2 mm, staubarm. Sackware 25kg.'
                 },
                 phosphor: {
                     name: 'Phosphor 20',
                     category: 'universal',
                     desc: 'Hochkonzentrierter Phosphor für Wurzelentwicklung und Energie.',
                     tags: ['Neuansaat', 'Wurzelstärkung', 'Stressresistenz'],
-                    application: 'Ideal bei Neuansaat oder Regeneration. Fördert das Wurzelwachstum signifikant. Dosierung je nach Bodenanalyse.'
+                    application: 'Bei Neuansaat: 10 l/ha. Zur Regeneration: 5-8 l/ha. Fördert die Jugendentwicklung.',
+                    composition: '20% P2O5 (wasserlöslich), Polysaccharide zur Stabilisierung.',
+                    specifications: 'pH-Wert: 4.5, Dichte: 1.25 g/cm³.'
                 },
                 pk: {
                     name: 'PK 20-20',
                     category: 'universal',
                     desc: 'Ausgewogene Phosphor-Kalium-Kombination für optimale Entwicklung.',
                     tags: ['Herbstvorbereitung', 'Winterhärte', 'Regeneration'],
-                    application: 'Stärkt die Gräser vor Stressphasen (Hitze/Kälte). Verbessert die Zellstruktur und Krankheitsresistenz.'
+                    application: '15-20 l/ha zur Stärkung vor Stressphasen (Sommer/Winter). Verbessert Zellwandstabilität.',
+                    composition: '20% P2O5, 20% K2O. Chelatisiert für optimale Blattaufnahme.',
+                    specifications: 'pH-Wert: 6.0, Dichte: 1.35 g/cm³.'
                 },
                 kalium: {
                     name: 'Kalium',
                     category: 'sport',
                     desc: 'Reines Kalium für maximale Belastbarkeit und Zellstabilität.',
                     tags: ['Trockenheitsschutz', 'Winterhärte', 'Spielbelastung'],
-                    application: 'Erhöht die Widerstandskraft gegen Trockenstress und Kälte. Essentiell für stark belastete Sportrasenflächen.'
+                    application: '20 l/ha in Stressperioden. Erhöht die Turgor-Spannung und Trockenheitsresistenz.',
+                    composition: '25% K2O (Kaliumoxid), chloridfrei. Enthält Aminosäuren zur Aufnahmebeschleunigung.',
+                    specifications: 'pH-Wert: 7.0, Dichte: 1.30 g/cm³.'
                 },
                 kalzium: {
                     name: 'Kalzium 880',
                     category: 'golf',
                     desc: 'Flüssiges Kalzium zur Verbesserung der Bodenstruktur.',
                     tags: ['Bodenverbesserung', 'pH-Regulierung', 'Zellstabilität'],
-                    application: 'Verbessert die Wasseraufnahme und Bodenstruktur. Wichtig für die Stabilität der Zellwände.'
+                    application: '10-15 l/ha zur Verbesserung der Bodenstruktur und Calciumversorgung. Wichtig auf sandigen Böden.',
+                    composition: '15% CaO, organisch komplexiert. Sofort pflanzenverfügbar.',
+                    specifications: 'pH-Wert: 5.5, besonders gut verträglich.'
                 },
                 eisen: {
                     name: 'Eisen',
                     category: 'universal',
                     desc: 'Für tiefgrüne Farbe und Moosverdrängung.',
                     tags: ['Farbe', 'Chlorophyll', 'Photosynthese'],
-                    application: 'Sorgt kurzfristig für sattgrüne Farbe ohne Massenwachstum. Hilft bei der Verdrängung von Moos.'
+                    application: '10-20 l/ha für schnellen Green-up Effekt. Vorsicht auf Steinplatten (Fleckenbildung).',
+                    composition: '6% Fe (Eisen), vollständig chelatisiert (EDTA/DTPA Mix).',
+                    specifications: 'pH-Wert: 3.5, dunkelrote Flüssigkeit.'
                 },
                 mikro: {
                     name: 'Mikroelemente',
                     category: 'universal',
                     desc: 'Komplexe Spurenelement-Mischung für vollständige Versorgung.',
                     tags: ['Mangelausgleich', 'Vitalität', 'Immunsystem'],
-                    application: 'Beugt Mangelerscheinungen vor und stärkt die allgemeine Vitalität der Gräser.'
+                    application: '3-5 l/ha präventiv oder bei Mangelerscheinungen. Blattapplikation empfohlen.',
+                    composition: 'Mix aus Zn, Mn, Cu, B, Mo. Alle metallischen Spurenelemente chelatisiert.',
+                    specifications: 'Hochkonzentriert, geringe Aufwandmenge.'
                 },
                 fulvic: {
                     name: 'Fulvic 40',
                     category: 'universal',
                     desc: 'Natürlicher Bodenkonditionierer mit hohem Fulvinsäure-Gehalt.',
                     tags: ['Nährstofftransport', 'Bodenaktivierung', 'Wurzelgesundheit'],
-                    application: 'Verbessert die Nährstoffaufnahme und stimuliert das Bodenleben. Kann mit anderen Düngern gemischt werden.'
+                    application: '5-10 l/ha als Zusatz zu anderen Düngern. Verbessert die Aufnahme aller Nährstoffe.',
+                    composition: '40% Fulvinsäuren aus natürlichem Leonardit.',
+                    specifications: 'Organischer Bodenhilfsstoff. pH-neutral.'
                 },
                 universal: {
                     name: 'Universal',
                     category: 'universal',
                     desc: 'Allround-Lösung für regelmäßige Anwendung und Basisversorgung.',
                     tags: ['Grunddüngung', 'Erhaltung', 'Balance'],
-                    application: 'Ausgewogene Nährstoffversorgung für die regelmäßige Pflege während der Saison.'
+                    application: '15-20 l/ha alle 2-3 Wochen während der Wachstumsperiode.',
+                    composition: 'NPK 10-10-10 + Spurenelemente. Ausgewogenes Verhältnis.',
+                    specifications: 'Universell einsetzbar für alle Rasentypen.'
                 },
                 resist: {
                     name: 'Universal Resist',
                     category: 'sport',
                     desc: 'Verstärkte Formel für erhöhte Stressresistenz und Belastbarkeit.',
                     tags: ['Spielbelastung', 'Extrembedingungen', 'Regeneration'],
-                    application: 'Speziell entwickelt für Phasen höchster Belastung. Stärkt die Gräser von innen heraus.'
+                    application: '20 l/ha vor oder nach intensiver Spielbelastung. Stärkt die Regenerationskraft.',
+                    composition: 'NPK 5-5-15 + Silizium + Algenextrakte.',
+                    specifications: 'Spezialprodukt für High-Performance Rasen.'
                 }
             }
         },
@@ -313,77 +335,99 @@ export const translations = {
                     category: 'universal',
                     desc: 'Nitrogen foliar fertilizer for intensive greening and healthy growth.',
                     tags: ['Turf Start', 'Growth Phase', 'Regeneration'],
-                    application: 'Dosage: 2–3 kg/ha per 400–600 l water. Interval: Every 2–4 weeks. Benefit: Slow, even nitrogen release – safe for turf surfaces, no risk of burning.'
+                    application: 'Dosage: 20–30 l/ha in 400–600 l water. Apply every 2–4 weeks for even N supply.',
+                    composition: '16% Total Nitrogen (N), 50% fast release, 50% organically bound.',
+                    specifications: 'pH: 6.5, Density: 1.18 g/cm³, Size: 10L Canister.'
                 },
                 nitrovita: {
                     name: 'Nitrovita 12',
                     category: 'universal',
                     desc: 'Nitrogen granules for long-lasting supply.',
                     tags: ['Long-term Effect', 'Basic Supply', 'Soil Activity'],
-                    application: 'Dosage: 20-30 g/m². Can be applied throughout the growing season. Ensures even growth without surges.'
+                    application: 'Rate: 25-35 g/m². Water in after application. Duration: 8-10 weeks.',
+                    composition: '12% N, 4% MgO, 40% organic matter. Finely granulated.',
+                    specifications: 'Grain size: 1-2 mm, low dust. 25kg Bag.'
                 },
                 phosphor: {
                     name: 'Phosphor 20',
                     category: 'universal',
                     desc: 'High concentration phosphorus for root development and energy.',
                     tags: ['New Seeding', 'Root Strengthening', 'Stress Resistance'],
-                    application: 'Ideal for new seeding or regeneration. Significantly promotes root growth. Dosage depends on soil analysis.'
+                    application: 'New seeding: 10 l/ha. Regeneration: 5-8 l/ha. Promotes juvenile development.',
+                    composition: '20% P2O5 (water soluble), Polysaccharides for stabilization.',
+                    specifications: 'pH: 4.5, Density: 1.25 g/cm³.'
                 },
                 pk: {
                     name: 'PK 20-20',
                     category: 'universal',
                     desc: 'Balanced phosphorus-potassium combination for optimal development.',
                     tags: ['Autumn Prep', 'Winter Hardiness', 'Regeneration'],
-                    application: 'Strengthens grass before stress phases (heat/cold). Improves cell structure and disease resistance.'
+                    application: '15-20 l/ha to strengthen before stress phases (summer/winter). Improves cell wall stability.',
+                    composition: '20% P2O5, 20% K2O. Chelated for optimal foliar uptake.',
+                    specifications: 'pH: 6.0, Density: 1.35 g/cm³.'
                 },
                 kalium: {
                     name: 'Kalium',
                     category: 'sport',
                     desc: 'Pure potassium for maximum durability and cell stability.',
                     tags: ['Drought Protection', 'Winter Hardiness', 'Play Stress'],
-                    application: 'Increases resistance to drought stress and cold. Essential for heavily used sports turf areas.'
+                    application: '20 l/ha during stress periods. Increases turgor pressure and drought resistance.',
+                    composition: '25% K2O (Potassium Oxide), chloride-free. Contains amino acids.',
+                    specifications: 'pH: 7.0, Density: 1.30 g/cm³.'
                 },
                 kalzium: {
                     name: 'Kalzium 880',
                     category: 'golf',
                     desc: 'Liquid calcium for improving soil structure.',
                     tags: ['Soil Improvement', 'pH Regulation', 'Cell Stability'],
-                    application: 'Improves water uptake and soil structure. Important for cell wall stability.'
+                    application: '10-15 l/ha to improve soil structure and calcium supply. Important on sandy soils.',
+                    composition: '15% CaO, organically complexed. Immediately plant-available.',
+                    specifications: 'pH: 5.5, very well tolerated.'
                 },
                 eisen: {
                     name: 'Eisen',
                     category: 'universal',
                     desc: 'For deep green color and moss displacement.',
                     tags: ['Color', 'Chlorophyll', 'Photosynthesis'],
-                    application: 'Provides rich green color quickly without mass growth. Helps displace moss.'
+                    application: '10-20 l/ha for fast green-up effect. Caution on stone slabs (staining).',
+                    composition: '6% Fe (Iron), fully chelated (EDTA/DTPA Mix).',
+                    specifications: 'pH: 3.5, dark red liquid.'
                 },
                 mikro: {
                     name: 'Mikroelemente',
                     category: 'universal',
                     desc: 'Complex trace element mixture for complete supply.',
                     tags: ['Deficiency Correction', 'Vitality', 'Immune System'],
-                    application: 'Prevents deficiency symptoms and strengthens general grass vitality.'
+                    application: '3-5 l/ha preventively or for deficiency symptoms. Foliar application recommended.',
+                    composition: 'Mix of Zn, Mn, Cu, B, Mo. All metallic trace elements chelated.',
+                    specifications: 'Highly concentrated, low application rate.'
                 },
                 fulvic: {
                     name: 'Fulvic 40',
                     category: 'universal',
                     desc: 'Natural soil conditioner with high fulvic acid content.',
                     tags: ['Nutrient Transport', 'Soil Activation', 'Root Health'],
-                    application: 'Improves nutrient uptake and stimulates soil life. Can be mixed with other fertilizers.'
+                    application: '5-10 l/ha as additive to other fertilizers. Improves uptake of all nutrients.',
+                    composition: '40% Fulvic acids from natural leonardite.',
+                    specifications: 'Organic soil auxiliary. pH-neutral.'
                 },
                 universal: {
                     name: 'Universal',
                     category: 'universal',
                     desc: 'All-round solution for regular application and basic supply.',
                     tags: ['Basic Fertilization', 'Maintenance', 'Balance'],
-                    application: 'Balanced nutrient supply for regular maintenance during the season.'
+                    application: '15-20 l/ha every 2-3 weeks during growing season.',
+                    composition: 'NPK 10-10-10 + Trace elements. Balanced ratio.',
+                    specifications: 'Universally applicable for all turf types.'
                 },
                 resist: {
                     name: 'Universal Resist',
                     category: 'sport',
                     desc: 'Reinforced formula for increased stress resistance and durability.',
                     tags: ['Play Stress', 'Extreme Conditions', 'Regeneration'],
-                    application: 'Specially developed for phases of highest stress. Strengthens grass from the inside out.'
+                    application: '20 l/ha before or after intense play stress. Strengthens regeneration power.',
+                    composition: 'NPK 5-5-15 + Silicon + Seaweed extracts.',
+                    specifications: 'Special product for high-performance turf.'
                 }
             }
         },
