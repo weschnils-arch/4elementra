@@ -2,26 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
+    const { t } = useLanguage();
     const currentYear = new Date().getFullYear();
-
-    const quickLinks = [
-        { label: 'Philosophie', href: '#philosophie' },
-        { label: 'Case Study', href: '#casestudy' },
-        { label: 'Vorteile', href: '#vorteile' },
-        { label: 'Produkte', href: '#produkte' },
-        { label: 'Technologie', href: '#ice' },
-        { label: 'FAQ', href: '#faq' },
-        { label: 'Kontakt', href: '#kontakt' },
-    ];
-
-    const legalLinks = [
-        { label: 'Impressum', href: '/impressum' },
-        { label: 'Datenschutz', href: '/datenschutz' },
-        { label: 'AGB', href: '/agb' },
-    ];
 
     return (
         <footer className={styles.footer}>
@@ -38,8 +24,7 @@ const Footer: React.FC = () => {
                             />
                         </a>
                         <p className={styles.tagline}>
-                            100% Natur, 0% Chemie – Premium organische Düngemittel
-                            für professionellen Sportrasen und Golfrasen.
+                            {t.footer.tagline}
                         </p>
                         <div className={styles.socials}>
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
@@ -52,9 +37,9 @@ const Footer: React.FC = () => {
 
                     {/* Quick Links */}
                     <div className={styles.linksColumn}>
-                        <h4 className={styles.columnTitle}>Navigation</h4>
+                        <h4 className={styles.columnTitle}>{t.footer.headings.nav}</h4>
                         <ul className={styles.linksList}>
-                            {quickLinks.map((link) => (
+                            {t.header.items.map((link: any) => (
                                 <li key={link.href}>
                                     <a href={link.href} className={styles.link}>{link.label}</a>
                                 </li>
@@ -64,7 +49,7 @@ const Footer: React.FC = () => {
 
                     {/* Contact Column */}
                     <div className={styles.contactColumn}>
-                        <h4 className={styles.columnTitle}>Kontakt</h4>
+                        <h4 className={styles.columnTitle}>{t.footer.headings.contact}</h4>
                         <div className={styles.contactInfo}>
                             <a href="mailto:office@4elementra.com" className={styles.contactLink}>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -76,21 +61,21 @@ const Footer: React.FC = () => {
                             <address className={styles.address}>
                                 CL DOÑA CARMEN, FASE IV 0 Pta.F16<br />
                                 29130 ALHAURÍN DE LA TORRE<br />
-                                MALAGA, Spanien
+                                MALAGA, {t.contact.labels.address ? 'Spain' : 'Spanien'}
                             </address>
                         </div>
                     </div>
 
                     {/* Newsletter Column */}
                     <div className={styles.newsletterColumn}>
-                        <h4 className={styles.columnTitle}>Newsletter</h4>
+                        <h4 className={styles.columnTitle}>{t.footer.headings.newsletter}</h4>
                         <p className={styles.newsletterText}>
-                            Erhalten Sie Updates zu neuen Produkten und Anwendungstipps.
+                            {t.footer.newsletterText}
                         </p>
                         <form className={styles.newsletterForm}>
                             <input
                                 type="email"
-                                placeholder="Ihre E-Mail-Adresse"
+                                placeholder={t.footer.newsletterPlaceholder}
                                 className={styles.newsletterInput}
                             />
                             <button type="submit" className={styles.newsletterBtn}>
@@ -104,15 +89,14 @@ const Footer: React.FC = () => {
 
                 <div className={styles.bottom}>
                     <div className={styles.copyright}>
-                        © {currentYear} 4ELEMENTRA. Alle Rechte vorbehalten.
+                        © {currentYear} 4ELEMENTRA. {t.footer.rights}
                     </div>
                     <div className={styles.legalLinks}>
-                        {legalLinks.map((link, index) => (
-                            <React.Fragment key={link.href}>
-                                <a href={link.href} className={styles.legalLink}>{link.label}</a>
-                                {index < legalLinks.length - 1 && <span className={styles.separator}>|</span>}
-                            </React.Fragment>
-                        ))}
+                        <a href="/impressum" className={styles.legalLink}>Impressum</a>
+                        <span className={styles.separator}>|</span>
+                        <a href="/datenschutz" className={styles.legalLink}>Datenschutz</a>
+                        <span className={styles.separator}>|</span>
+                        <a href="/agb" className={styles.legalLink}>AGB</a>
                     </div>
                 </div>
             </div>

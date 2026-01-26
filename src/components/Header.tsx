@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { t, language, setLanguage } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,15 +17,6 @@ const Header: React.FC = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    const navItems = [
-        { label: 'Philosophie', href: '#philosophie' },
-        { label: 'Case Study', href: '#casestudy' },
-        { label: 'Vorteile', href: '#vorteile' },
-        { label: 'Produkte', href: '#produkte' },
-        { label: 'I.C.E. Technologie', href: '#ice' },
-        { label: 'Kontakt', href: '#kontakt' },
-    ];
 
     return (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
@@ -40,7 +33,7 @@ const Header: React.FC = () => {
 
                 <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.open : ''}`}>
                     <ul className={styles.navList}>
-                        {navItems.map((item) => (
+                        {t.header.items.map((item: any) => (
                             <li key={item.href}>
                                 <a
                                     href={item.href}
@@ -52,8 +45,25 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                     </ul>
-                    <a href="#kontakt" className={`btn btn-primary ${styles.ctaBtn}`}>
-                        Beratung anfragen
+
+                    <div className="lang-switch">
+                        <button
+                            className={`lang-btn ${language === 'de' ? 'active' : ''}`}
+                            onClick={() => setLanguage('de')}
+                        >
+                            DE
+                        </button>
+                        <span className="lang-sep">|</span>
+                        <button
+                            className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+                            onClick={() => setLanguage('en')}
+                        >
+                            ENG
+                        </button>
+                    </div>
+
+                    <a href="#kontakt" className={`btn btn-primary-outline ${styles.ctaBtn}`}>
+                        {t.header.cta}
                     </a>
                 </nav>
 

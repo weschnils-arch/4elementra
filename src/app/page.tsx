@@ -1,3 +1,4 @@
+// 4ELEMENTRA Main Page
 import Header from '@/components/Header';
 import SplitHero from '@/components/SplitHero';
 import Philosophy from '@/components/Philosophy';

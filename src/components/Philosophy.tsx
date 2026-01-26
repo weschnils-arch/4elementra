@@ -1,12 +1,15 @@
 "use client";
 
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Philosophy.module.css';
 
 const Philosophy: React.FC = () => {
+    const { t } = useLanguage();
+
     const elements = [
         {
-            name: 'Erde',
+            name: t.philosophy.elements.earth.name,
             icon: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -14,22 +17,22 @@ const Philosophy: React.FC = () => {
                     <path d="M24 26V16M20 20L24 16L28 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
             ),
-            description: 'Organische Basis, Nährstoffspeicherung und strukturelle Stabilität für gesundes Wurzelwachstum.',
+            description: t.philosophy.elements.earth.desc,
             color: '#8B4513'
         },
         {
-            name: 'Wasser',
+            name: t.philosophy.elements.water.name,
             icon: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 8C24 8 12 20 12 28C12 34.6274 17.3726 40 24 40C30.6274 40 36 34.6274 36 28C36 20 24 8 24 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
                     <path d="M20 28C20 30.2091 21.7909 32 24 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
             ),
-            description: 'Lebensessenz und Transport von Wirkstoffen direkt in die Pflanzenfasern – für optimale Versorgung.',
+            description: t.philosophy.elements.water.desc,
             color: '#1E90FF'
         },
         {
-            name: 'Luft',
+            name: t.philosophy.elements.air.name,
             icon: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 20H28C31.3137 20 34 17.3137 34 14C34 10.6863 31.3137 8 28 8C25.8 8 23.9 9.2 22.8 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -37,17 +40,17 @@ const Philosophy: React.FC = () => {
                     <path d="M8 36H16C18.2091 36 20 34.2091 20 32C20 29.7909 18.2091 28 16 28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
             ),
-            description: 'Zirkulation im Boden und Wurzelatmung – essenziell für einen lebendigen, aktiven Boden.',
+            description: t.philosophy.elements.air.desc,
             color: '#87CEEB'
         },
         {
-            name: 'Energie',
+            name: t.philosophy.elements.energy.name,
             icon: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 6L28 20H38L30 30L34 44L24 34L14 44L18 30L10 20H20L24 6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
                 </svg>
             ),
-            description: 'Die innere Urkraft – symbolisiert durch Magenta. Antrieb für Stoffwechsel und Regeneration.',
+            description: t.philosophy.elements.energy.desc,
             color: '#E20074'
         }
     ];
@@ -56,15 +59,13 @@ const Philosophy: React.FC = () => {
         <section id="philosophie" className={`section ${styles.philosophy}`}>
             <div className="container">
                 <div className={styles.header}>
-                    <span className={styles.eyebrow}>Unsere Philosophie</span>
+                    <span className={styles.eyebrow}>{t.philosophy.eyebrow}</span>
                     <h2 className={styles.title}>
-                        Die Kraft der <span className={styles.highlight}>vier Elemente</span>
+                        {t.philosophy.title} <span className={styles.highlight}>{t.philosophy.titleHighlight}</span>
                     </h2>
                     <div className={styles.divider}></div>
                     <p className={styles.subtitle}>
-                        4ELEMENTRA basiert auf der zeitlosen Balance der vier Elemente.
-                        Wir nutzen natürliche Kreisläufe statt chemischer Eingriffe –
-                        für Ergebnisse, die überzeugen.
+                        {t.philosophy.subtitle}
                     </p>
                 </div>
 
@@ -88,12 +89,11 @@ const Philosophy: React.FC = () => {
                 <div className={styles.coreMessage}>
                     <div className={styles.messageInner}>
                         <blockquote className={styles.quote}>
-                            "100% Natur, 0% Chemie – Nicht nur möglich, sondern
-                            <span className={styles.quoteHighlight}> erfolgreicher als herkömmliche Methoden.</span>"
+                            {t.philosophy.quote}
+                            <span className={styles.quoteHighlight}> {t.philosophy.quoteHighlight}</span>
                         </blockquote>
                         <p className={styles.messageText}>
-                            Rückkehr zu den Wurzeln. Ganzheitliche Lösungen statt isolierter Wirkstoffe.
-                            Bewiesene Wirksamkeit in professionellen Umgebungen.
+                            {t.philosophy.quoteSub}
                         </p>
                     </div>
                 </div>

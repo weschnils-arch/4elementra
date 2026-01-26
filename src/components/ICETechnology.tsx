@@ -1,27 +1,11 @@
 "use client";
 
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './ICETechnology.module.css';
 
 const ICETechnology: React.FC = () => {
-    const features = [
-        {
-            title: 'Interzellulärer Transport',
-            description: 'Nährstoffe werden direkt zwischen den Zellen transportiert, ohne Umwege über das Wurzelsystem.'
-        },
-        {
-            title: 'Cytoplasmatischer Austausch',
-            description: 'Natürliche Aufnahme in das Zellplasma für maximale Bioverfügbarkeit.'
-        },
-        {
-            title: 'Sofortige Wirkung',
-            description: 'Schnellere Nährstoffversorgung als bei herkömmlichen Bodendüngern.'
-        },
-        {
-            title: '100% Aufnahme',
-            description: 'Keine Verluste durch Auswaschung oder Fixierung im Boden.'
-        }
-    ];
+    const { t } = useLanguage();
 
     return (
         <section id="ice" className={`section ${styles.iceTech}`}>
@@ -29,24 +13,21 @@ const ICETechnology: React.FC = () => {
                 <div className={styles.grid}>
                     {/* Left Content */}
                     <div className={styles.content}>
-                        <span className={styles.eyebrow}>Technologie</span>
+                        <span className={styles.eyebrow}>{t.ice.eyebrow}</span>
                         <h2 className={styles.title}>
-                            I.C.E. Technology:
-                            <span className={styles.highlight}> Die Zukunft der Rasenbetreuung</span>
+                            {t.ice.title}
+                            <span className={styles.highlight}> {t.ice.titleHighlight}</span>
                         </h2>
-                        <p className={styles.description}>
-                            <strong>I</strong>ntercellular <strong>C</strong>ytoplasmic <strong>E</strong>xchange –
-                            unsere patentierte Technologie ermöglicht die direkte Aufnahme von Nährstoffen
-                            in die Pflanzenzellen, ohne Verluste durch konventionelle Bodenprozesse.
+                        <p className={styles.description} dangerouslySetInnerHTML={{ __html: t.ice.desc.replace('Intercellular Cytoplasmic Exchange', '<strong>Intercellular Cytoplasmic Exchange</strong>') }}>
                         </p>
 
                         <div className={styles.featuresGrid}>
-                            {features.map((feature, index) => (
-                                <div key={feature.title} className={styles.featureItem}>
+                            {t.ice.features.map((feature: any, index: number) => (
+                                <div key={index} className={styles.featureItem}>
                                     <div className={styles.featureNumber}>{String(index + 1).padStart(2, '0')}</div>
                                     <div className={styles.featureContent}>
                                         <h4 className={styles.featureTitle}>{feature.title}</h4>
-                                        <p className={styles.featureDesc}>{feature.description}</p>
+                                        <p className={styles.featureDesc}>{feature.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -55,41 +36,47 @@ const ICETechnology: React.FC = () => {
 
                     {/* Right Diagram */}
                     <div className={styles.diagram}>
-                        <div className={styles.diagramWrapper}>
-                            <div className={styles.cell}>
-                                <div className={styles.cellNucleus}></div>
-                                <div className={styles.cellMembrane}></div>
+                        {/* New Flex Container for Labels + Graphic */}
+                        <div className={styles.diagramLayout}>
 
-                                {/* Nutrient particles */}
-                                <div className={`${styles.particle} ${styles.particle1}`}>
-                                    <span>N</span>
-                                </div>
-                                <div className={`${styles.particle} ${styles.particle2}`}>
-                                    <span>P</span>
-                                </div>
-                                <div className={`${styles.particle} ${styles.particle3}`}>
-                                    <span>K</span>
-                                </div>
-                                <div className={`${styles.particle} ${styles.particle4}`}>
-                                    <span>Fe</span>
-                                </div>
-
-                                {/* Arrows */}
-                                <div className={styles.arrows}>
-                                    <div className={`${styles.arrow} ${styles.arrow1}`}></div>
-                                    <div className={`${styles.arrow} ${styles.arrow2}`}></div>
-                                    <div className={`${styles.arrow} ${styles.arrow3}`}></div>
-                                </div>
-                            </div>
-
+                            {/* Labels on the Left */}
                             <div className={styles.diagramLabels}>
                                 <div className={styles.label}>
                                     <span className={styles.labelDot}></span>
-                                    Zelluläre Aufnahme
+                                    {t.ice.diagram.label1}
                                 </div>
                                 <div className={styles.label}>
                                     <span className={`${styles.labelDot} ${styles.labelDotMagenta}`}></span>
-                                    4ELEMENTRA Nährstoffe
+                                    {t.ice.diagram.label2}
+                                </div>
+                            </div>
+
+                            {/* Graphic on the Right */}
+                            <div className={styles.graphicWrapper}>
+                                <div className={styles.cell}>
+                                    <div className={styles.cellNucleus}></div>
+                                    <div className={styles.cellMembrane}></div>
+
+                                    {/* Nutrient particles */}
+                                    <div className={`${styles.particle} ${styles.particle1}`}>
+                                        <span>N</span>
+                                    </div>
+                                    <div className={`${styles.particle} ${styles.particle2}`}>
+                                        <span>P</span>
+                                    </div>
+                                    <div className={`${styles.particle} ${styles.particle3}`}>
+                                        <span>K</span>
+                                    </div>
+                                    <div className={`${styles.particle} ${styles.particle4}`}>
+                                        <span>Fe</span>
+                                    </div>
+
+                                    {/* Arrows */}
+                                    <div className={styles.arrows}>
+                                        <div className={`${styles.arrow} ${styles.arrow1}`}></div>
+                                        <div className={`${styles.arrow} ${styles.arrow2}`}></div>
+                                        <div className={`${styles.arrow} ${styles.arrow3}`}></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -97,15 +84,15 @@ const ICETechnology: React.FC = () => {
                         <div className={styles.stats}>
                             <div className={styles.statItem}>
                                 <span className={styles.statValue}>95%</span>
-                                <span className={styles.statLabel}>Höhere Absorption</span>
+                                <span className={styles.statLabel}>{t.ice.stats.absorption}</span>
                             </div>
                             <div className={styles.statItem}>
                                 <span className={styles.statValue}>3x</span>
-                                <span className={styles.statLabel}>Schnellere Wirkung</span>
+                                <span className={styles.statLabel}>{t.ice.stats.speed}</span>
                             </div>
                             <div className={styles.statItem}>
                                 <span className={styles.statValue}>0%</span>
-                                <span className={styles.statLabel}>Auswaschungsverluste</span>
+                                <span className={styles.statLabel}>{t.ice.stats.loss}</span>
                             </div>
                         </div>
                     </div>

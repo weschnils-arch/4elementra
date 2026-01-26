@@ -2,9 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './SplitHero.module.css';
 
 const SplitHero: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section className={styles.hero}>
             {/* Left Side - Sportrasen */}
@@ -20,27 +23,26 @@ const SplitHero: React.FC = () => {
                     <div className={styles.overlay}></div>
                 </div>
                 <div className={styles.content}>
-                    <span className={styles.badge}>Sportrasen</span>
+                    <span className={styles.badge}>{t.hero.sport.badge}</span>
                     <h1 className={styles.title}>
-                        Bundesliga-Qualität.<br />
-                        <span className={styles.highlight}>100% Organisch.</span>
+                        {t.hero.sport.title}<br />
+                        <span className={styles.highlight}>{t.hero.sport.titleHighlight}</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Maximale Belastbarkeit für professionelle Spielstätten –
-                        4 Spiele in 6 Tagen, kompromisslos nachhaltig.
+                        {t.hero.sport.subtitle}
                     </p>
                     <div className={styles.stats}>
                         <div className={styles.stat}>
                             <span className={styles.statNumber}>2+</span>
-                            <span className={styles.statLabel}>Jahre ohne Chemie</span>
+                            <span className={styles.statLabel}>{t.hero.stats.years}</span>
                         </div>
                         <div className={styles.stat}>
                             <span className={styles.statNumber}>100%</span>
-                            <span className={styles.statLabel}>Organisch</span>
+                            <span className={styles.statLabel}>{t.hero.stats.organic}</span>
                         </div>
                     </div>
                     <a href="#sportrasen" className={`btn btn-primary btn-lg ${styles.cta}`}>
-                        Sportrasen-Lösungen entdecken
+                        {t.hero.sport.cta}
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
@@ -51,7 +53,7 @@ const SplitHero: React.FC = () => {
             {/* Divider */}
             <div className={styles.divider}>
                 <div className={styles.dividerLine}></div>
-                <span className={styles.dividerText}>ODER</span>
+                <span className={styles.dividerText}>{t.hero.divider}</span>
                 <div className={styles.dividerLine}></div>
             </div>
 
@@ -68,27 +70,26 @@ const SplitHero: React.FC = () => {
                     <div className={`${styles.overlay} ${styles.overlayGolf}`}></div>
                 </div>
                 <div className={styles.content}>
-                    <span className={styles.badge}>Golfrasen</span>
+                    <span className={styles.badge}>{t.hero.golf.badge}</span>
                     <h1 className={styles.title}>
-                        Perfekte Spielqualität.<br />
-                        <span className={styles.highlight}>Natürlich erreicht.</span>
+                        {t.hero.golf.title}<br />
+                        <span className={styles.highlight}>{t.hero.golf.titleHighlight}</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Gleichmäßige Greens, perfekter Ball-Roll und langfristige Bodengesundheit
-                        für anspruchsvolle Golfplätze.
+                        {t.hero.golf.subtitle}
                     </p>
                     <div className={styles.stats}>
                         <div className={styles.stat}>
                             <span className={styles.statNumber}>Premium</span>
-                            <span className={styles.statLabel}>Spielqualität</span>
+                            <span className={styles.statLabel}>{t.hero.stats.quality}</span>
                         </div>
                         <div className={styles.stat}>
                             <span className={styles.statNumber}>0%</span>
-                            <span className={styles.statLabel}>Chemie</span>
+                            <span className={styles.statLabel}>{t.hero.stats.chemistry}</span>
                         </div>
                     </div>
                     <a href="#golfrasen" className={`btn btn-primary btn-lg ${styles.cta}`}>
-                        Golfrasen-Lösungen entdecken
+                        {t.hero.golf.cta}
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
@@ -98,7 +99,7 @@ const SplitHero: React.FC = () => {
 
             {/* Scroll Indicator */}
             <div className={styles.scrollIndicator}>
-                <span>Mehr entdecken</span>
+                <span>{t.hero.scroll}</span>
                 <div className={styles.scrollMouse}>
                     <div className={styles.scrollWheel}></div>
                 </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../components/HeaderUtils.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
+import ClientLayout from "@/components/ClientLayout";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,7 +40,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/logo.png" type="image/png" />
       </head>
       <body className={inter.variable}>
-        {children}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

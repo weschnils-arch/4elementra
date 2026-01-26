@@ -95,13 +95,56 @@
 
 /* Diagram Styles */
 .diagram {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.diagramWrapper {
+.diagramLayout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Labels on the Left */
+.diagramLabels {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.labelDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.labelDotMagenta {
+    background: var(--magenta);
+    box-shadow: 0 0 10px rgba(226, 0, 116, 0.4);
+}
+
+/* Graphic Wrapper */
+.graphicWrapper {
     position: relative;
     aspect-ratio: 1;
-    max-width: 500px;
+    width: 100%;
+    max-width: 400px;
+    /* Adjusted size */
     margin: 0 auto;
 }
 
@@ -290,39 +333,11 @@
     }
 }
 
-.diagramLabels {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 32px;
-}
-
-.label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.labelDot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.labelDotMagenta {
-    background: var(--magenta);
-}
-
 .stats {
     display: flex;
     justify-content: center;
     gap: 48px;
-    margin-top: 64px;
+    width: 100%;
 }
 
 .statItem {
@@ -365,7 +380,21 @@
         order: -1;
     }
 
-    .diagramWrapper {
+    .diagramLayout {
+        flex-direction: column-reverse;
+        /* Graphic on top on mobile, or keep side by side if possible? Stack is better */
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .diagramLabels {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .graphicWrapper {
         max-width: 300px;
     }
 

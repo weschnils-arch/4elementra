@@ -2,16 +2,18 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './CaseStudy.module.css';
 
 const CaseStudy: React.FC = () => {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+    const { t } = useLanguage();
 
     const stats = [
-        { value: '4', label: 'Spiele in 6 Tagen', suffix: '' },
-        { value: '2+', label: 'Jahre ohne Chemie', suffix: '' },
-        { value: '100', label: 'Organisch', suffix: '%' },
-        { value: '0', label: 'Chemische Rückstände', suffix: '' },
+        { value: '4', label: t.casestudy.stats.games, suffix: '' },
+        { value: '2+', label: t.casestudy.stats.years, suffix: '' },
+        { value: '100', label: t.hero.stats.organic, suffix: '%' }, // Reusing organic from hero or hardcoded 'Organisch' if key exists. Let's use hero key for simplicity or add to casestudy.
+        { value: '0', label: t.casestudy.stats.residues, suffix: '' },
     ];
 
     return (
@@ -20,15 +22,13 @@ const CaseStudy: React.FC = () => {
                 <div className={styles.grid}>
                     {/* Left Content */}
                     <div className={styles.content}>
-                        <span className={styles.eyebrow}>Case Study</span>
+                        <span className={styles.eyebrow}>{t.casestudy.eyebrow}</span>
                         <h2 className={styles.title}>
-                            Bundesliga-Arena: Organische Rasenbetreuung
-                            <span className={styles.highlight}> auf höchstem Niveau</span>
+                            {t.casestudy.title}
+                            <span className={styles.highlight}> {t.casestudy.titleHighlight}</span>
                         </h2>
                         <p className={styles.description}>
-                            Seit über zwei Jahren betreuen wir ein österreichisches Bundesliga-Stadion
-                            ausschließlich mit organischen Düngemitteln – unter extremer Belastung mit
-                            mehreren Spielen pro Woche.
+                            {t.casestudy.desc}
                         </p>
 
                         <div className={styles.statsGrid}>
@@ -50,13 +50,12 @@ const CaseStudy: React.FC = () => {
                                 </svg>
                             </div>
                             <blockquote className={styles.quote}>
-                                "Nach mehreren Jahren konsequenter, nachhaltiger Pflege kann ich sagen:
-                                Es funktioniert – und zwar besser als alles, was ich mit Chemie erlebt habe."
+                                {t.casestudy.quote}
                             </blockquote>
                             <div className={styles.author}>
                                 <div className={styles.authorInfo}>
                                     <span className={styles.authorName}>Harry Faldner</span>
-                                    <span className={styles.authorRole}>Head of Grounds</span>
+                                    <span className={styles.authorRole}>{t.casestudy.role}</span>
                                 </div>
                             </div>
                         </div>
@@ -109,18 +108,12 @@ const CaseStudy: React.FC = () => {
                         )}
 
                         <div className={styles.featureBadges}>
-                            <div className={styles.badge}>
-                                <span className={styles.badgeIcon}>✓</span>
-                                Extreme Belastbarkeit
-                            </div>
-                            <div className={styles.badge}>
-                                <span className={styles.badgeIcon}>✓</span>
-                                Schnelle Regeneration
-                            </div>
-                            <div className={styles.badge}>
-                                <span className={styles.badgeIcon}>✓</span>
-                                Nachhaltige Methode
-                            </div>
+                            {t.casestudy.badges.map((badge: string, idx: number) => (
+                                <div key={idx} className={styles.badge}>
+                                    <span className={styles.badgeIcon}>✓</span>
+                                    {badge}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Contact.module.css';
 
 const Contact: React.FC = () => {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -50,15 +52,13 @@ const Contact: React.FC = () => {
                 <div className={styles.grid}>
                     {/* Left Content */}
                     <div className={styles.content}>
-                        <span className={styles.eyebrow}>Kontakt</span>
+                        <span className={styles.eyebrow}>{t.contact.eyebrow}</span>
                         <h2 className={styles.title}>
-                            Lassen Sie sich von unseren
-                            <span className={styles.highlight}> Experten beraten</span>
+                            {t.contact.title}
+                            <span className={styles.highlight}> {t.contact.titleHighlight}</span>
                         </h2>
                         <p className={styles.description}>
-                            Unser Team unterstützt Sie bei der Auswahl der richtigen Produkte
-                            für Ihre spezifischen Anforderungen. Vereinbaren Sie ein unverbindliches
-                            Beratungsgespräch.
+                            {t.contact.desc}
                         </p>
 
                         <div className={styles.contactInfo}>
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
                                     </svg>
                                 </div>
                                 <div className={styles.infoContent}>
-                                    <span className={styles.infoLabel}>Adresse</span>
+                                    <span className={styles.infoLabel}>{t.contact.labels.address || 'Adresse'}</span>
                                     <address className={styles.infoValue}>
                                         CL DOÑA CARMEN, FASE IV 0 Pta.F16<br />
                                         29130 ALHAURÍN DE LA TORRE, MALAGA<br />
@@ -120,13 +120,13 @@ const Contact: React.FC = () => {
                                         <polyline points="22 4 12 14.01 9 11.01" />
                                     </svg>
                                 </div>
-                                <h3>Nachricht gesendet!</h3>
-                                <p>Wir melden uns schnellstmöglich bei Ihnen.</p>
+                                <h3>{t.contact.success.title}</h3>
+                                <p>{t.contact.success.desc}</p>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className={styles.form}>
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="name" className={styles.label}>Name *</label>
+                                    <label htmlFor="name" className={styles.label}>{t.contact.labels.name}</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -135,12 +135,12 @@ const Contact: React.FC = () => {
                                         onChange={handleChange}
                                         required
                                         className={styles.input}
-                                        placeholder="Ihr vollständiger Name"
+                                        placeholder={t.contact.placeholders.name}
                                     />
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="email" className={styles.label}>E-Mail *</label>
+                                    <label htmlFor="email" className={styles.label}>{t.contact.labels.email}</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -149,12 +149,12 @@ const Contact: React.FC = () => {
                                         onChange={handleChange}
                                         required
                                         className={styles.input}
-                                        placeholder="ihre.email@beispiel.com"
+                                        placeholder={t.contact.placeholders.email}
                                     />
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="company" className={styles.label}>Unternehmen / Einrichtung</label>
+                                    <label htmlFor="company" className={styles.label}>{t.contact.labels.company}</label>
                                     <input
                                         type="text"
                                         id="company"
@@ -162,12 +162,12 @@ const Contact: React.FC = () => {
                                         value={formData.company}
                                         onChange={handleChange}
                                         className={styles.input}
-                                        placeholder="z.B. Golfclub, Stadion, etc."
+                                        placeholder={t.contact.placeholders.company}
                                     />
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="type" className={styles.label}>Interessenbereich *</label>
+                                    <label htmlFor="type" className={styles.label}>{t.contact.labels.type}</label>
                                     <select
                                         id="type"
                                         name="type"
@@ -176,14 +176,14 @@ const Contact: React.FC = () => {
                                         required
                                         className={styles.select}
                                     >
-                                        <option value="sport">Sportrasen</option>
-                                        <option value="golf">Golfrasen</option>
-                                        <option value="both">Beides</option>
+                                        <option value="sport">{t.contact.options.sport}</option>
+                                        <option value="golf">{t.contact.options.golf}</option>
+                                        <option value="both">{t.contact.options.both}</option>
                                     </select>
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="message" className={styles.label}>Nachricht *</label>
+                                    <label htmlFor="message" className={styles.label}>{t.contact.labels.message}</label>
                                     <textarea
                                         id="message"
                                         name="message"
@@ -191,7 +191,7 @@ const Contact: React.FC = () => {
                                         onChange={handleChange}
                                         required
                                         className={styles.textarea}
-                                        placeholder="Beschreiben Sie Ihre Anforderungen..."
+                                        placeholder={t.contact.placeholders.message}
                                         rows={5}
                                     />
                                 </div>
@@ -204,11 +204,11 @@ const Contact: React.FC = () => {
                                     {isSubmitting ? (
                                         <>
                                             <span className={styles.spinner}></span>
-                                            Wird gesendet...
+                                            {t.contact.sending}
                                         </>
                                     ) : (
                                         <>
-                                            Nachricht senden
+                                            {t.contact.btn}
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                                             </svg>
