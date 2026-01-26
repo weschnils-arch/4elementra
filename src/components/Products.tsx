@@ -41,7 +41,7 @@ const Products: React.FC = () => {
 
     const imageMap: Record<string, string> = {
         nitrogena: '/images/products/Nitrogena16.png',
-        nitrovita: '/images/products/UNIVERSAL.png',
+        nitrovita: '/images/products/Nitrogena16.png',
         phosphor: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-PHOSPHORUS20.png',
         pk: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-PK2020.png',
         kalium: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-POTASSIUM.png',
