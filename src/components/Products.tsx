@@ -57,7 +57,7 @@ const Products: React.FC = () => {
 
     const filteredKeys = productKeys.filter(key => {
         const product = t.products.items[key] as ProductItem;
-        return activeFilter === 'all' || product.category === activeFilter;
+        return activeFilter === 'all' || product.category === activeFilter || product.category === 'universal';
     });
 
     const getBackContent = (key: string, product: ProductItem) => {
