@@ -35,7 +35,7 @@
 
 .divider {
     width: 200px;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg,
             transparent 0%,
             var(--magenta) 20%,
