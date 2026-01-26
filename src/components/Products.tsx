@@ -1,36 +1,53 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import styles from './Products.module.css';
 
-interface ProductDef {
-    key: string;
+interface ProductItem {
     name: string;
-    applications: string[];
-    category: 'sport' | 'golf' | 'both';
+    category: 'universal' | 'sport' | 'golf';
+    desc: string;
+    tags: string[];
+    application: string;
 }
 
 const Products: React.FC = () => {
     const [activeFilter, setActiveFilter] = useState<'all' | 'sport' | 'golf'>('all');
+    const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
     const { t } = useLanguage();
 
-    const productDefs: ProductDef[] = [
-        { key: 'nitrogena', name: 'Nitrogena 16', applications: ['Rasenstart', 'Wachstumsphase', 'Regeneration'], category: 'both' },
-        { key: 'phosphor', name: 'Phosphor 20', applications: ['Neuansaat', 'Wurzelstärkung', 'Stressresistenz'], category: 'both' },
-        { key: 'pk', name: 'PK 20-20', applications: ['Herbstvorbereitung', 'Winterhärte', 'Regeneration'], category: 'both' },
-        { key: 'kalium', name: 'Kalium', applications: ['Trockenheitsschutz', 'Winterhärte', 'Spielbelastung'], category: 'sport' },
-        { key: 'kalzium', name: 'Kalzium 880', applications: ['Bodenverbesserung', 'pH-Regulierung', 'Zellstabilität'], category: 'golf' },
-        { key: 'eisen', name: 'Eisen', applications: ['Farbe', 'Chlorophyll', 'Photosynthese'], category: 'both' },
-        { key: 'mikro', name: 'Mikroelemente', applications: ['Mangelausgleich', 'Vitalität', 'Immunsystem'], category: 'both' },
-        { key: 'fulvic', name: 'Fulvic 40', applications: ['Nährstofftransport', 'Bodenaktivierung', 'Wurzelgesundheit'], category: 'both' },
-        { key: 'universal', name: 'Universal', applications: ['Grunddüngung', 'Erhaltung', 'Balance'], category: 'both' },
-        { key: 'resist', name: 'Universal Resist', applications: ['Spielbelastung', 'Extrembedingungen', 'Regeneration'], category: 'sport' }
-    ];
+    const toggleFlip = (key: string) => {
+        const newFlipped = new Set(flippedCards);
+        if (newFlipped.has(key)) {
+            newFlipped.delete(key);
+        } else {
+            newFlipped.add(key);
+        }
+        setFlippedCards(newFlipped);
+    };
 
-    const filteredProducts = productDefs.filter(product =>
-        activeFilter === 'all' || product.category === activeFilter || product.category === 'both'
-    );
+    const imageMap: Record<string, string> = {
+        nitrogena: '/images/products/Nitrogena16.png',
+        nitrovita: '/images/products/UNIVERSAL.png', // Placeholder
+        phosphor: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-PHOSPHORUS20.png',
+        pk: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-PK2020.png',
+        kalium: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-POTASSIUM.png',
+        kalzium: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-CALCIUM880.png',
+        eisen: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-IRON.png',
+        mikro: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-MICROELEMENTS.png',
+        fulvic: '/images/products/Fulvic40.png',
+        universal: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-UNIVERSAL.png',
+        resist: '/images/products/4E-PACKSHOTS-montagen-etikett-kanister-UNIVERSALRESIST.png'
+    };
+
+    const productKeys = Object.keys(t.products.items) as Array<keyof typeof t.products.items>;
+
+    const filteredKeys = productKeys.filter(key => {
+        const product = t.products.items[key] as ProductItem;
+        return activeFilter === 'all' || product.category === activeFilter;
+    });
 
     return (
         <section id="produkte" className={`section ${styles.products}`}>
@@ -67,41 +84,80 @@ const Products: React.FC = () => {
                 </div>
 
                 <div className={styles.grid}>
-                    {filteredProducts.map((product) => (
-                        <div key={product.key} className={styles.productCard}>
-                            <div className={styles.cardHeader}>
-                                <h3 className={styles.productName}>{product.name}</h3>
-                                <span className={`${styles.categoryBadge} ${styles[product.category]}`}>
-                                    {/* @ts-ignore */}
-                                    {t.products.categories[product.category]}
-                                </span>
+                    {filteredKeys.map((key) => {
+                        const product = t.products.items[key] as ProductItem;
+                        const isFlipped = flippedCards.has(key as string);
+
+                        return (
+                            <div
+                                key={key}
+                                className={`${styles.cardContainer} ${isFlipped ? styles.flipped : ''}`}
+                            >
+                                <div className={styles.cardInner}>
+                                    {/* FRONT SIDE */}
+                                    <div className={styles.cardFront}>
+                                        <div className={styles.cardHeader}>
+                                            <h3 className={styles.productName}>{product.name}</h3>
+                                            <div className={styles.badgeGroup}>
+                                                <div className={styles.qrIcon} onClick={() => console.log('QR Click')}>
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                        <rect x="3" y="3" width="7" height="7" />
+                                                        <rect x="14" y="3" width="7" height="7" />
+                                                        <rect x="3" y="14" width="7" height="7" />
+                                                        <rect x="14" y="14" width="3" height="3" />
+                                                        <path d="M17 17h4v4h-4z" />
+                                                    </svg>
+                                                </div>
+                                                <span className={`${styles.categoryBadge} ${styles[product.category]}`}>
+                                                    {/* @ts-ignore */}
+                                                    {t.products.categories[product.category]}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <p className={styles.productDescription}>{product.desc}</p>
+
+                                        <div className={styles.tags}>
+                                            {product.tags && product.tags.map((tag, i) => (
+                                                <span key={i} className={styles.tag}>{tag}</span>
+                                            ))}
+                                        </div>
+
+                                        <div className={styles.links}>
+                                            <button className={styles.textLink} onClick={() => toggleFlip(key as string)}>{t.products.links.app}</button>
+                                            <button className={styles.textLink} onClick={() => toggleFlip(key as string)}>{t.products.links.comp}</button>
+                                            <button className={styles.textLink} onClick={() => toggleFlip(key as string)}>{t.products.links.spec}</button>
+                                        </div>
+                                    </div>
+
+                                    {/* BACK SIDE */}
+                                    <div className={styles.cardBack}>
+                                        <div className={styles.backNav}>
+                                            <button className={styles.backLink} onClick={() => toggleFlip(key as string)}>
+                                                ← {t.products.links.back}
+                                            </button>
+                                        </div>
+
+                                        <div className={styles.backImageWrapper}>
+                                            <Image
+                                                src={imageMap[key as string] || '/images/products/UNIVERSAL.png'}
+                                                alt={product.name}
+                                                fill
+                                                style={{ objectFit: 'contain', padding: '20px' }}
+                                            />
+                                        </div>
+
+                                        <div className={styles.backContent}>
+                                            <div className={styles.backHeader}>
+                                                <h4 className={styles.backHeadline}>{t.products.links.headline}</h4>
+                                            </div>
+                                            <p className={styles.backText}>{product.application}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            {/* @ts-ignore */}
-                            <p className={styles.productDescription}>{t.products.items[product.key].desc}</p>
-                            <div className={styles.applications}>
-                                {product.applications.map((app) => (
-                                    <span key={app} className={styles.appTag}>{app}</span>
-                                ))}
-                            </div>
-                            <div className={styles.cardActions}>
-                                <button className={styles.detailsBtn}>
-                                    {t.products.details}
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-                                <button className={styles.qrBtn} title="QR-Code">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <rect x="3" y="3" width="7" height="7" />
-                                        <rect x="14" y="3" width="7" height="7" />
-                                        <rect x="3" y="14" width="7" height="7" />
-                                        <rect x="14" y="14" width="3" height="3" />
-                                        <path d="M17 17h4v4h-4z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 <div className={styles.cta}>

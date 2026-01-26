@@ -86,18 +86,86 @@ export const translations = {
             details: 'Produktdetails',
             ctaText: 'Benötigen Sie eine individuelle Beratung zu unseren Produkten?',
             cta: 'Expertenberatung anfragen',
-            categories: { both: 'Universell', sport: 'Sport', golf: 'Golf' },
+            categories: { universal: 'Universell', sport: 'Sport', golf: 'Golf' },
+            links: { app: 'Anwendung', comp: 'Zusammensetzung', spec: 'Spezifikationen', back: 'Zurück', headline: 'ANWENDUNG' },
             items: {
-                nitrogena: { desc: 'Stickstoff-Blattdünger für intensive Grünfärbung und gesundes Wachstum.' },
-                phosphor: { desc: 'Fördert Wurzelbildung und Energiestoffwechsel für robuste Pflanzen.' },
-                pk: { desc: 'Ausgewogene Phosphor-Kalium-Kombination für optimale Entwicklung.' },
-                kalium: { desc: 'Stärkt Zellwände und erhöht Widerstandsfähigkeit gegen Stress.' },
-                kalzium: { desc: 'Verbessert Bodenstruktur und Nährstoffverfügbarkeit.' },
-                eisen: { desc: 'Intensive Grünfärbung ohne übermäßiges Wachstum.' },
-                mikro: { desc: 'Komplexe Spurenelement-Mischung für vollständige Versorgung.' },
-                fulvic: { desc: 'Natürlicher Bodenkonditionierer mit hohem Fulvinsäure-Gehalt.' },
-                universal: { desc: 'Allround-Lösung für regelmäßige Anwendung und Basisversorgung.' },
-                resist: { desc: 'Verstärkte Formel für erhöhte Stressresistenz und Belastbarkeit.' }
+                nitrogena: {
+                    name: 'Nitrogena 16',
+                    category: 'universal',
+                    desc: 'Stickstoff-Blattdünger für intensive Grünfärbung und gesundes Wachstum.',
+                    tags: ['Rasenstart', 'Wachstumsphase', 'Regeneration'],
+                    application: 'Dosierung: 2–3 kg/ha pro 400–600 l Wasser. Intervall: Alle 2–4 Wochen. Vorteil: Langsame, gleichmäßige Stickstofffreisetzung – sicher für Rasenflächen, kein Verbrennungsrisiko.'
+                },
+                nitrovita: {
+                    name: 'Nitrovita 12',
+                    category: 'universal',
+                    desc: 'Stickstoff-Granulat für langanhaltende Versorgung.',
+                    tags: ['Langzeitwirkung', 'Basisversorgung', 'Bodenaktivität'],
+                    application: 'Dosierung: 20-30 g/m². Anwendung während der gesamten Wachstumsperiode möglich. Sorgt für gleichmäßigen Wuchs ohne Stoßwachstum.'
+                },
+                phosphor: {
+                    name: 'Phosphor 20',
+                    category: 'universal',
+                    desc: 'Hochkonzentrierter Phosphor für Wurzelentwicklung und Energie.',
+                    tags: ['Neuansaat', 'Wurzelstärkung', 'Stressresistenz'],
+                    application: 'Ideal bei Neuansaat oder Regeneration. Fördert das Wurzelwachstum signifikant. Dosierung je nach Bodenanalyse.'
+                },
+                pk: {
+                    name: 'PK 20-20',
+                    category: 'universal',
+                    desc: 'Ausgewogene Phosphor-Kalium-Kombination für optimale Entwicklung.',
+                    tags: ['Herbstvorbereitung', 'Winterhärte', 'Regeneration'],
+                    application: 'Stärkt die Gräser vor Stressphasen (Hitze/Kälte). Verbessert die Zellstruktur und Krankheitsresistenz.'
+                },
+                kalium: {
+                    name: 'Kalium',
+                    category: 'sport',
+                    desc: 'Reines Kalium für maximale Belastbarkeit und Zellstabilität.',
+                    tags: ['Trockenheitsschutz', 'Winterhärte', 'Spielbelastung'],
+                    application: 'Erhöht die Widerstandskraft gegen Trockenstress und Kälte. Essentiell für stark belastete Sportrasenflächen.'
+                },
+                kalzium: {
+                    name: 'Kalzium 880',
+                    category: 'golf',
+                    desc: 'Flüssiges Kalzium zur Verbesserung der Bodenstruktur.',
+                    tags: ['Bodenverbesserung', 'pH-Regulierung', 'Zellstabilität'],
+                    application: 'Verbessert die Wasseraufnahme und Bodenstruktur. Wichtig für die Stabilität der Zellwände.'
+                },
+                eisen: {
+                    name: 'Eisen',
+                    category: 'universal',
+                    desc: 'Für tiefgrüne Farbe und Moosverdrängung.',
+                    tags: ['Farbe', 'Chlorophyll', 'Photosynthese'],
+                    application: 'Sorgt kurzfristig für sattgrüne Farbe ohne Massenwachstum. Hilft bei der Verdrängung von Moos.'
+                },
+                mikro: {
+                    name: 'Mikroelemente',
+                    category: 'universal',
+                    desc: 'Komplexe Spurenelement-Mischung für vollständige Versorgung.',
+                    tags: ['Mangelausgleich', 'Vitalität', 'Immunsystem'],
+                    application: 'Beugt Mangelerscheinungen vor und stärkt die allgemeine Vitalität der Gräser.'
+                },
+                fulvic: {
+                    name: 'Fulvic 40',
+                    category: 'universal',
+                    desc: 'Natürlicher Bodenkonditionierer mit hohem Fulvinsäure-Gehalt.',
+                    tags: ['Nährstofftransport', 'Bodenaktivierung', 'Wurzelgesundheit'],
+                    application: 'Verbessert die Nährstoffaufnahme und stimuliert das Bodenleben. Kann mit anderen Düngern gemischt werden.'
+                },
+                universal: {
+                    name: 'Universal',
+                    category: 'universal',
+                    desc: 'Allround-Lösung für regelmäßige Anwendung und Basisversorgung.',
+                    tags: ['Grunddüngung', 'Erhaltung', 'Balance'],
+                    application: 'Ausgewogene Nährstoffversorgung für die regelmäßige Pflege während der Saison.'
+                },
+                resist: {
+                    name: 'Universal Resist',
+                    category: 'sport',
+                    desc: 'Verstärkte Formel für erhöhte Stressresistenz und Belastbarkeit.',
+                    tags: ['Spielbelastung', 'Extrembedingungen', 'Regeneration'],
+                    application: 'Speziell entwickelt für Phasen höchster Belastung. Stärkt die Gräser von innen heraus.'
+                }
             }
         },
         ice: {
@@ -237,18 +305,86 @@ export const translations = {
             details: 'Product Details',
             ctaText: 'Do you need individual advice on our products?',
             cta: 'Request Expert Advice',
-            categories: { both: 'Universal', sport: 'Sport', golf: 'Golf' },
+            categories: { universal: 'Universal', sport: 'Sport', golf: 'Golf' },
+            links: { app: 'Application', comp: 'Composition', spec: 'Specifications', back: 'Back', headline: 'APPLICATION' },
             items: {
-                nitrogena: { desc: 'Nitrogen foliar fertilizer for intensive greening and healthy growth.' },
-                phosphor: { desc: 'Promotes root formation and energy metabolism for robust plants.' },
-                pk: { desc: 'Balanced phosphorus-potassium combination for optimal development.' },
-                kalium: { desc: 'Strengthens cell walls and increases resistance to stress.' },
-                kalzium: { desc: 'Improves soil structure and nutrient availability.' },
-                eisen: { desc: 'Intensive greening without excessive growth.' },
-                mikro: { desc: 'Complex trace element mixture for complete supply.' },
-                fulvic: { desc: 'Natural soil conditioner with high fulvic acid content.' },
-                universal: { desc: 'All-round solution for regular application and basic supply.' },
-                resist: { desc: 'Reinforced formula for increased stress resistance and durability.' }
+                nitrogena: {
+                    name: 'Nitrogena 16',
+                    category: 'universal',
+                    desc: 'Nitrogen foliar fertilizer for intensive greening and healthy growth.',
+                    tags: ['Turf Start', 'Growth Phase', 'Regeneration'],
+                    application: 'Dosage: 2–3 kg/ha per 400–600 l water. Interval: Every 2–4 weeks. Benefit: Slow, even nitrogen release – safe for turf surfaces, no risk of burning.'
+                },
+                nitrovita: {
+                    name: 'Nitrovita 12',
+                    category: 'universal',
+                    desc: 'Nitrogen granules for long-lasting supply.',
+                    tags: ['Long-term Effect', 'Basic Supply', 'Soil Activity'],
+                    application: 'Dosage: 20-30 g/m². Can be applied throughout the growing season. Ensures even growth without surges.'
+                },
+                phosphor: {
+                    name: 'Phosphor 20',
+                    category: 'universal',
+                    desc: 'High concentration phosphorus for root development and energy.',
+                    tags: ['New Seeding', 'Root Strengthening', 'Stress Resistance'],
+                    application: 'Ideal for new seeding or regeneration. Significantly promotes root growth. Dosage depends on soil analysis.'
+                },
+                pk: {
+                    name: 'PK 20-20',
+                    category: 'universal',
+                    desc: 'Balanced phosphorus-potassium combination for optimal development.',
+                    tags: ['Autumn Prep', 'Winter Hardiness', 'Regeneration'],
+                    application: 'Strengthens grass before stress phases (heat/cold). Improves cell structure and disease resistance.'
+                },
+                kalium: {
+                    name: 'Kalium',
+                    category: 'sport',
+                    desc: 'Pure potassium for maximum durability and cell stability.',
+                    tags: ['Drought Protection', 'Winter Hardiness', 'Play Stress'],
+                    application: 'Increases resistance to drought stress and cold. Essential for heavily used sports turf areas.'
+                },
+                kalzium: {
+                    name: 'Kalzium 880',
+                    category: 'golf',
+                    desc: 'Liquid calcium for improving soil structure.',
+                    tags: ['Soil Improvement', 'pH Regulation', 'Cell Stability'],
+                    application: 'Improves water uptake and soil structure. Important for cell wall stability.'
+                },
+                eisen: {
+                    name: 'Eisen',
+                    category: 'universal',
+                    desc: 'For deep green color and moss displacement.',
+                    tags: ['Color', 'Chlorophyll', 'Photosynthesis'],
+                    application: 'Provides rich green color quickly without mass growth. Helps displace moss.'
+                },
+                mikro: {
+                    name: 'Mikroelemente',
+                    category: 'universal',
+                    desc: 'Complex trace element mixture for complete supply.',
+                    tags: ['Deficiency Correction', 'Vitality', 'Immune System'],
+                    application: 'Prevents deficiency symptoms and strengthens general grass vitality.'
+                },
+                fulvic: {
+                    name: 'Fulvic 40',
+                    category: 'universal',
+                    desc: 'Natural soil conditioner with high fulvic acid content.',
+                    tags: ['Nutrient Transport', 'Soil Activation', 'Root Health'],
+                    application: 'Improves nutrient uptake and stimulates soil life. Can be mixed with other fertilizers.'
+                },
+                universal: {
+                    name: 'Universal',
+                    category: 'universal',
+                    desc: 'All-round solution for regular application and basic supply.',
+                    tags: ['Basic Fertilization', 'Maintenance', 'Balance'],
+                    application: 'Balanced nutrient supply for regular maintenance during the season.'
+                },
+                resist: {
+                    name: 'Universal Resist',
+                    category: 'sport',
+                    desc: 'Reinforced formula for increased stress resistance and durability.',
+                    tags: ['Play Stress', 'Extreme Conditions', 'Regeneration'],
+                    application: 'Specially developed for phases of highest stress. Strengthens grass from the inside out.'
+                }
             }
         },
         ice: {
