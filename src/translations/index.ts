@@ -46,7 +46,7 @@ export const translations = {
                 air: { name: 'Luft', desc: 'Zirkulation im Boden und Wurzelatmung – essenziell für einen lebendigen, aktiven Boden.' },
                 energy: { name: 'Energie', desc: 'Die innere Urkraft – symbolisiert durch Magenta. Antrieb für Stoffwechsel und Regeneration.' }
             },
-            quote: '"100% Natur, 0% Chemie – Nicht nur möglich, sondern',
+            quote: '"100% Natur – Nicht nur möglich, sondern',
             quoteHighlight: 'erfolgreicher als herkömmliche Methoden."',
             quoteSub: 'Rückkehr zu den Wurzeln. Ganzheitliche Lösungen statt isolierter Wirkstoffe. Bewiesene Wirksamkeit in professionellen Umgebungen.'
         },
@@ -233,7 +233,7 @@ export const translations = {
             success: { title: 'Nachricht gesendet!', desc: 'Wir melden uns schnellstmöglich bei Ihnen.' }
         },
         footer: {
-            tagline: '100% Natur, 0% Chemie – Premium organische Düngemittel für professionellen Sportrasen und Golfrasen.',
+            tagline: '100% Natur – Premium organische Düngemittel für professionellen Sportrasen und Golfrasen.',
             headings: { nav: 'Navigation', contact: 'Kontakt', newsletter: 'Newsletter' },
             newsletterText: 'Erhalten Sie Updates zu neuen Produkten und Anwendungstipps.',
             newsletterPlaceholder: 'Ihre E-Mail-Adresse',
@@ -287,7 +287,7 @@ export const translations = {
                 air: { name: 'Air', desc: 'Circulation in the soil and root respiration – essential for living, active soil.' },
                 energy: { name: 'Energy', desc: 'The inner primal force – symbolized by Magenta. Drive for metabolism and regeneration.' }
             },
-            quote: '"100% Nature, 0% Chemicals – Not only possible, but',
+            quote: '"100% Nature – Not only possible, but',
             quoteHighlight: 'more successful than conventional methods."',
             quoteSub: 'Return to roots. Holistic solutions instead of isolated agents. Proven effectiveness in professional environments.'
         },
@@ -474,7 +474,7 @@ export const translations = {
             success: { title: 'Message Sent!', desc: 'We will get back to you as soon as possible.' }
         },
         footer: {
-            tagline: '100% Nature, 0% Chemicals – Premium organic fertilizers for professional sports turf and golf turf.',
+            tagline: '100% Nature – Premium organic fertilizers for professional sports turf and golf turf.',
             headings: { nav: 'Navigation', contact: 'Contact', newsletter: 'Newsletter' },
             newsletterText: 'Receive updates on new products and application tips.',
             newsletterPlaceholder: 'Your email address',

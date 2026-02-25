@@ -14,7 +14,7 @@ const SplitHero: React.FC = () => {
             <div className={styles.side}>
                 <div className={styles.bgImage}>
                     <Image
-                        src="/images/stadium/hero.jpg"
+                        src="/images/stadium/hero-v2.webp"
                         alt="Professioneller Sportrasen im Stadion"
                         fill
                         priority
@@ -61,7 +61,7 @@ const SplitHero: React.FC = () => {
             <div className={styles.side}>
                 <div className={styles.bgImage}>
                     <Image
-                        src="/images/golf/hero.webp"
+                        src="/images/golf/hero-v2.webp"
                         alt="Perfekter Golfrasen auf einem Green"
                         fill
                         priority
@@ -82,10 +82,6 @@ const SplitHero: React.FC = () => {
                         <div className={styles.stat}>
                             <span className={styles.statNumber}>Premium</span>
                             <span className={styles.statLabel}>{t.hero.stats.quality}</span>
-                        </div>
-                        <div className={styles.stat}>
-                            <span className={styles.statNumber}>0%</span>
-                            <span className={styles.statLabel}>{t.hero.stats.chemistry}</span>
                         </div>
                     </div>
                     <a href="#kontakt" className={`btn btn-primary btn-lg ${styles.cta}`}>
