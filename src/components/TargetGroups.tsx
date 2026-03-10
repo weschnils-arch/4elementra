@@ -8,6 +8,19 @@ import styles from './TargetGroups.module.css';
 const TargetGroups: React.FC = () => {
     const { t } = useLanguage();
 
+    const handleCardClick = () => {
+        const contactSection = document.getElementById('kontakt');
+        const nameInput = document.getElementById('name');
+
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        if (nameInput) {
+            nameInput.focus({ preventScroll: true });
+        }
+    };
+
     return (
         <section id="zielgruppen" className={`section ${styles.targetGroups}`}>
             <div className="container">
@@ -20,7 +33,7 @@ const TargetGroups: React.FC = () => {
 
                 <div className={styles.grid}>
                     {t.targetGroups.items.map((group: any, index: number) => (
-                        <div key={index} className={styles.card}>
+                        <div key={index} className={styles.card} onClick={handleCardClick}>
                             <div className={styles.imageWrapper}>
                                 <Image
                                     src={group.image}
