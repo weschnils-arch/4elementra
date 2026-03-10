@@ -79,7 +79,7 @@
 }
 
 .statLabel {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: var(--dark-gray);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -228,8 +228,8 @@
 
 .featureBadges {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-top: 24px;
     justify-content: flex-start;
 }
@@ -238,15 +238,14 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 20px;
+    padding: 10px 16px;
     background: var(--white);
     border: 1px solid var(--gray);
     border-radius: 100px;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     color: var(--anthracite);
     transition: all var(--transition-medium);
-    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -260,6 +259,21 @@
 .badgeIcon {
     color: var(--magenta);
     font-weight: 700;
+}
+
+/* Legal Notice */
+.legalNotice {
+    grid-column: 1 / -1;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.legalNotice p {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
 }
 
 @media (max-width: 1024px) {

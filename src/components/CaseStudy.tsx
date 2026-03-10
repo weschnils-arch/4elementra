@@ -9,12 +9,7 @@ const CaseStudy: React.FC = () => {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const { t } = useLanguage();
 
-    const stats = [
-        { value: '4', label: t.casestudy.stats.games, suffix: '' },
-        { value: '2+', label: t.casestudy.stats.years, suffix: '' },
-        { value: '100', label: t.hero.stats.organic, suffix: '%' }, // Reusing organic from hero or hardcoded 'Organisch' if key exists. Let's use hero key for simplicity or add to casestudy.
-        { value: '0', label: t.casestudy.stats.residues, suffix: '' },
-    ];
+    const stats = t.casestudy.stats;
 
     return (
         <section id="casestudy" className={`section ${styles.caseStudy}`}>
@@ -32,7 +27,7 @@ const CaseStudy: React.FC = () => {
                         </p>
 
                         <div className={styles.statsGrid}>
-                            {stats.map((stat) => (
+                            {stats.map((stat: any) => (
                                 <div key={stat.label} className={styles.statItem}>
                                     <span className={styles.statValue}>
                                         {stat.value}
@@ -54,7 +49,6 @@ const CaseStudy: React.FC = () => {
                             </blockquote>
                             <div className={styles.author}>
                                 <div className={styles.authorInfo}>
-                                    <span className={styles.authorName}>Harry Faldner</span>
                                     <span className={styles.authorRole}>{t.casestudy.role}</span>
                                 </div>
                             </div>
@@ -116,6 +110,10 @@ const CaseStudy: React.FC = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+
+                <div className={styles.legalNotice}>
+                    <p>{t.casestudy.legal}</p>
                 </div>
             </div>
         </section>

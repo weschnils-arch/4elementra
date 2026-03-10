@@ -55,6 +55,10 @@ const FAQ: React.FC = () => {
                             {t.faq.cta}
                         </a>
                     </div>
+
+                    <div className={styles.legalNotice}>
+                        <p>{t.faq.legal}</p>
+                    </div>
                 </div>
             </div>
         </section>

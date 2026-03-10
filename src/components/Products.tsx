@@ -242,6 +242,10 @@ const Products: React.FC = () => {
                         );
                     })}
                 </div>
+
+                <div className={styles.legalNotice}>
+                    <p>{t.products.legal}</p>
+                </div>
             </div>
         </section>
     );

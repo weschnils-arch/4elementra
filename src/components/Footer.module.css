@@ -164,6 +164,16 @@
     transform: translateX(2px);
 }
 
+.legalNotice {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    padding: 0 20px;
+}
+
 /* Bottom */
 .bottom {
     display: flex;

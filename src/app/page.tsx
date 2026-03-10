@@ -1,12 +1,13 @@
-// 4ELEMENTRA Main Page
 import Header from '@/components/Header';
 import SplitHero from '@/components/SplitHero';
 import Philosophy from '@/components/Philosophy';
 import CaseStudy from '@/components/CaseStudy';
 import Benefits from '@/components/Benefits';
-import Comparison from '@/components/Comparison';
-import Products from '@/components/Products';
+import Process from '@/components/Process';
+import Programs from '@/components/Programs';
 import ICETechnology from '@/components/ICETechnology';
+import Products from '@/components/Products';
+import TargetGroups from '@/components/TargetGroups';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -20,9 +21,11 @@ export default function Home() {
         <Philosophy />
         <CaseStudy />
         <Benefits />
-        <Comparison />
-        <Products />
+        <Process />
+        <Programs />
         <ICETechnology />
+        <Products />
+        <TargetGroups />
         <FAQ />
         <Contact />
       </main>

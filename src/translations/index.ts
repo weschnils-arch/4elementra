@@ -12,69 +12,87 @@ export const translations = {
             cta: 'Beratung anfragen',
         },
         hero: {
+            title: 'Professionelle Rasenpflege',
+            titleHighlight: 'beginnt im Boden.',
+            subtitle: 'Ein organisch orientiertes Pflegekonzept für Sportrasen und Golfanlagen – entwickelt für hohe Belastung, stabile Spielflächen und nachhaltige Bodenentwicklung.',
+            subline: 'Entwickelt aus praktischer Erfahrung im professionellen Greenkeeping.',
+            pills: [
+                'Stadien und Sportanlagen',
+                'Trainingsplätze',
+                'Golfanlagen',
+                'professionelle Sportrasenflächen'
+            ],
             sport: {
-                badge: 'Sportrasen',
-                title: 'Bundesliga Qualität.',
-                titleHighlight: '100% Organisch.',
-                subtitle: 'Maximale Belastbarkeit für professionelle Spielstätten – 4 Spiele in 6 Tagen, kompromisslos nachhaltig.',
-                cta: 'Sportrasen-Lösungen',
+                badge: 'Einsatzbereiche',
+                cta: 'Pflegekonzept kennenlernen',
             },
-            divider: 'ODER',
+            divider: 'UND',
             golf: {
                 badge: 'Golfrasen',
-                title: 'Perfekte Spielqualität.',
-                titleHighlight: 'Natürlich erreicht.',
-                subtitle: 'Gleichmäßige Greens, perfekter Ball-Roll und langfristige Bodengesundheit für anspruchsvolle Golfplätze.',
-                cta: 'Golfrasen-Lösungen',
+                cta: 'Beratung anfragen',
             },
-            stats: {
-                years: 'Jahre ohne Chemie',
-                organic: 'Organisch',
-                quality: 'Spielqualität',
-                chemistry: 'Chemie',
-            },
+            trustPoints: [
+                'strukturiertes Pflegekonzept',
+                'praxisorientierte Anwendungen',
+                'nachhaltige Bodenentwicklung'
+            ],
             scroll: 'Mehr entdecken'
         },
         philosophy: {
-            eyebrow: 'Unsere Philosophie',
-            title: 'Die Kraft der',
-            titleHighlight: 'vier Elemente',
-            subtitle: '4ELEMENTRA basiert auf der zeitlosen Balance der vier Elemente. Wir nutzen natürliche Kreisläufe statt chemischer Eingriffe – für Ergebnisse, die überzeugen.',
+            eyebrow: 'Philosophie',
+            title: 'Die Qualität einer Spielfläche entsteht durch das',
+            titleHighlight: 'Zusammenspiel von Boden, Pflanze und Pflege.',
+            subtitle: 'Unser Ansatz basiert auf drei Grundprinzipien:',
             elements: {
-                earth: { name: 'Erde', desc: 'Organische Basis, Nährstoffspeicherung und strukturelle Stabilität für gesundes Wurzelwachstum.' },
-                water: { name: 'Wasser', desc: 'Lebensessenz und Transport von Wirkstoffen direkt in die Pflanzenfasern – für optimale Versorgung.' },
-                air: { name: 'Luft', desc: 'Zirkulation im Boden und Wurzelatmung – essenziell für einen lebendigen, aktiven Boden.' },
-                energy: { name: 'Energie', desc: 'Die innere Urkraft – symbolisiert durch Magenta. Antrieb für Stoffwechsel und Regeneration.' }
+                soil: {
+                    name: 'Boden verstehen',
+                    desc: 'Ein aktives Bodenleben und stabile Bodenstruktur bilden die Grundlage für belastbare Spielflächen.'
+                },
+                plant: {
+                    name: 'Pflanze unterstützen',
+                    desc: 'Eine ausgewogene Nährstoffversorgung unterstützt Wachstum, Regeneration und Stressresistenz.'
+                },
+                maintenance: {
+                    name: 'Pflege strukturieren',
+                    desc: 'Durch abgestimmte Anwendungen kann ein stabiler Pflegeplan umgesetzt werden.'
+                }
             },
-            quote: '"100% Natur – Nicht nur möglich, sondern',
-            quoteHighlight: 'erfolgreicher als herkömmliche Methoden."',
-            quoteSub: 'Rückkehr zu den Wurzeln. Ganzheitliche Lösungen statt isolierter Wirkstoffe. Bewiesene Wirksamkeit in professionellen Umgebungen.'
+            quote: '"Nach längerer Anwendung zeigt sich, dass ein organisch orientiertes Pflegekonzept auch unter professionellen Bedingungen praktikabel sein kann."',
+            quoteHighlight: 'Leitung Rasenpflege (anonymisiert)',
+            quoteSub: 'Praxisbeispiel aus dem professionellen Sportrasenbereich.'
         },
         casestudy: {
-            eyebrow: 'Case Study',
-            title: 'Bundesliga-Arena: Organische Rasenbetreuung',
-            titleHighlight: 'auf höchstem Niveau',
-            desc: 'Seit über zwei Jahren betreuen wir ein österreichisches Bundesliga-Stadion ausschließlich mit organischen Düngemitteln – unter extremer Belastung mit mehreren Spielen pro Woche.',
-            stats: {
-                games: 'Spiele in 6 Tagen',
-                years: 'Jahre ohne Chemie',
-                residues: 'Chemische Rückstände'
-            },
-            quote: '"Nach mehreren Jahren konsequenter, nachhaltiger Pflege kann ich sagen: Es funktioniert – und zwar besser als alles, was ich mit Chemie erlebt habe."',
-            role: 'Head of Grounds',
-            badges: ['Extreme Belastbarkeit', 'Schnelle Regeneration', 'Nachhaltige Methode']
+            eyebrow: 'Praxisbeispiel',
+            title: 'Organische Rasenpflege',
+            titleHighlight: 'unter hoher Belastung',
+            desc: 'Seit über einem Jahr wird ein professioneller Sportrasenstandort ausschließlich mit einem organisch orientierten Pflegekonzept betreut. Der Standort ist regelmäßig intensiver Nutzung ausgesetzt, mit mehreren Spielen innerhalb kurzer Zeiträume. Trotz dieser Belastung zeigt sich eine stabile Grasnarbe, eine schnelle Regeneration sowie eine nachhaltige Entwicklung der Bodenstruktur.',
+            stats: [
+                { value: '> 1', suffix: '', label: 'Jahr Anwendung' },
+                { value: '✓', suffix: '', label: 'Mehrere Spiele/Woche' },
+                { value: '100', suffix: '%', label: 'Organisches Konzept' },
+                { value: '0', suffix: '', label: 'Chemische Rückstände' }
+            ],
+            quote: '"Trotz regelmäßiger intensiver Nutzung mit mehreren Spielen innerhalb kurzer Zeiträume zeigt sich eine stabile Grasnarbe, eine schnelle Regeneration sowie eine nachhaltige Entwicklung der Bodenstruktur."',
+            role: 'Professioneller Sportrasenstandort',
+            badges: [
+                'Hohe Belastbarkeit der Spielfläche',
+                'Schnelle Regeneration',
+                'Nachhaltige Bodenentwicklung',
+                'Reduzierung chemischer Belastungen'
+            ],
+            legal: 'Die dargestellten Erfahrungen basieren auf praktischen Anwendungen in professionellen Sportrasenumgebungen. Ergebnisse können je nach Standort, Klima, Bodenstruktur, Nutzung und Pflegeplan variieren.'
         },
         benefits: {
             eyebrow: 'Vorteile',
             title: 'Warum',
-            subtitle: 'Organische Effizienz trifft professionelle Anforderungen – mit messbaren Vorteilen für Ihren Rasen und Ihr Budget.',
+            subtitle: 'Ein strukturiertes Pflegekonzept trägt dazu beitragen, die Qualität und Stabilität von Sportrasenflächen langfristig zu unterstützen.',
             items: [
-                { title: 'Extreme Belastbarkeit', desc: 'Bewährte Leistung unter härtesten Bedingungen – 4 Spiele in 6 Tagen, ohne Qualitätsverlust.' },
-                { title: 'Schnelle Regeneration', desc: 'Natürliche Aktivierung der Selbstheilungskräfte für schnelle Erholung nach Belastung.' },
-                { title: 'Kostenersparnis', desc: 'Weniger Dünger, weniger Arbeit, niedrigere Betriebskosten bei besseren Ergebnissen.' },
-                { title: 'Nachhaltigkeit', desc: 'Umweltschutz ohne Kompromisse. Gut für den Boden, gut für das Ökosystem.' },
-                { title: 'Keine Chemikalien', desc: '100% organisch, keine Rückstände – sichere Spielflächen für Sportler und Besucher.' },
-                { title: 'Langfristige Bodengesundheit', desc: 'Aufbau eines lebendigen Bodens statt kurzfristiger Symptombekämpfung.' }
+                { title: 'Belastbarkeit', desc: 'Unterstützung stabiler Rasennarben für hohe Spielbelastung.' },
+                { title: 'Regeneration', desc: 'Förderung der natürlichen Regenerationskraft der Gräser.' },
+                { title: 'Pflegeeffizienz', desc: 'Planbare Pflegeabläufe durch ein strukturiertes System.' },
+                { title: 'Nachhaltigkeit', desc: 'Nachhaltige Bodenentwicklung durch organisch orientierten Ansatz.' },
+                { title: 'Bodengesundheit', desc: 'Förderung eines aktiven Bodenlebens und stabiler Struktur.' },
+                { title: 'Strukturierte Pflege', desc: 'Strukturierte Nährstoffversorgung über die gesamte Saison.' }
             ]
         },
         products: {
@@ -188,21 +206,21 @@ export const translations = {
                     composition: 'NPK 5-5-15 + Silizium + Algenextrakte.',
                     specifications: 'Spezialprodukt für High-Performance Rasen.'
                 }
-            }
+            },
+            legal: 'Produktinformationen dienen der allgemeinen Beschreibung des Pflegekonzepts. Anwendung, Dosierung und Ergebnisse können je nach Standort, Klima, Bodenstruktur und Nutzung variieren.'
         },
         ice: {
             eyebrow: 'Technologie',
-            title: 'I.C.E. Technology:',
-            titleHighlight: 'Die Zukunft der Rasenbetreuung',
-            desc: 'Intercellular Cytoplasmic Exchange – unsere patentierte Technologie ermöglicht die direkte Aufnahme von Nährstoffen in die Pflanzenzellen, ohne Verluste durch konventionelle Bodenprozesse.',
+            title: 'I.C.E. Technologie:',
+            titleHighlight: 'Pflanzenphysiologischer Ansatz',
+            desc: 'Der Begriff I.C.E. beschreibt einen pflanzenphysiologischen Ansatz zur Bereitstellung von Nährstoffen in einer Form, die von der Pflanze effektiv genutzt werden kann.',
             features: [
-                { title: 'Interzellulärer Transport', desc: 'Nährstoffe werden direkt zwischen den Zellen transportiert, ohne Umwege über das Wurzelsystem.' },
-                { title: 'Cytoplasmatischer Austausch', desc: 'Natürliche Aufnahme in das Zellplasma für maximale Bioverfügbarkeit.' },
-                { title: 'Sofortige Wirkung', desc: 'Schnellere Nährstoffversorgung als bei herkömmlichen Bodendüngern.' },
-                { title: '100% Aufnahme', desc: 'Keine Verluste durch Auswaschung oder Fixierung im Boden.' }
+                { title: 'Nährstoffverfügbarkeit', desc: 'Optimierte Bereitstellung von Nährstoffen für die direkte Aufnahme.' },
+                { title: 'Stoffwechselprozesse', desc: 'Unterstützung natürlicher pflanzlicher Stoffwechselprozesse.' },
+                { title: 'Praxisorientiert', desc: 'Entwickelt für die Anwendung im professionellen Sportrasenbereich.' }
             ],
-            diagram: { label1: 'Zelluläre Aufnahme', label2: '4ELEMENTRA Nährstoffe' },
-            stats: { absorption: 'Höhere Absorption', speed: 'Schnellere Wirkung', loss: 'Auswaschungsverluste' }
+            diagram: { label1: 'Zelluläre Aufnahme', label2: 'I.C.E. Nährstoffe' },
+            stats: { absorption: 'Höhere Aufnahme', speed: 'Schnellere Wirkung', loss: 'Auswaschungsverluste' }
         },
         faq: {
             eyebrow: 'Häufige Fragen',
@@ -212,32 +230,135 @@ export const translations = {
             ctaText: 'Haben Sie weitere Fragen?',
             cta: 'Kontakt aufnehmen',
             items: [
-                { q: 'Warum organische Düngemittel statt Chemie?', a: 'Organische Düngemittel arbeiten mit der Natur, nicht gegen sie. Sie fördern ein gesundes Bodenleben, verbessern die Bodenstruktur langfristig und hinterlassen keine schädlichen Rückstände. Unsere Erfahrung im Bundesliga-Stadion zeigt: Organisch erreicht nicht nur die gleichen, sondern sogar bessere Ergebnisse als chemische Methoden – bei niedrigeren Gesamtkosten.' },
-                { q: 'Wie schnell sehe ich Ergebnisse?', a: 'Dank unserer I.C.E. Technology sind erste Effekte oft bereits nach 24-48 Stunden sichtbar. Für nachhaltige Ergebnisse empfehlen wir eine konsequente Anwendung über mindestens eine Saison.' },
-                { q: 'Funktioniert es auch unter extremer Belastung?', a: 'Absolut. Unser bekanntestes Referenzprojekt ist ein österreichisches Bundesliga-Stadion mit bis zu 4 Spielen in 6 Tagen. Seit über 2 Jahren wird der Rasen ausschließlich organisch betreut – mit exzellenten Ergebnissen.' },
-                { q: 'Welche Produkte sind für meine Situation geeignet?', a: 'Das hängt von mehreren Faktoren ab. Wir bieten eine kostenlose Erstberatung, bei der wir gemeinsam eine maßgeschneiderte Produktkombination für Ihre Anforderungen entwickeln.' },
-                { q: 'Wie wird die Anwendung durchgeführt?', a: 'Unsere Produkte werden in der Regel als Blattdünger appliziert. Die Anwendung ist unkompliziert und erfordert kein spezielles Equipment. Zu jedem Produkt liefern wir detaillierte Anwendungsempfehlungen.' },
-                { q: 'Sind die Produkte für Golfplätze geeignet?', a: 'Ja, wir haben spezifische Produktlinien für Golfrasen entwickelt. Diese berücksichtigen die besonderen Anforderungen von Greens, Fairways und Tees.' }
-            ]
+                { q: 'Warum ein organisch orientiertes Pflegekonzept?', a: 'Ein organisch orientiertes Pflegekonzept unterstützt langfristig die natürliche Bodenentwicklung. Im Gegensatz zu rein chemischen Ansätzen wird das Bodenleben aktiv unterstützt und die Struktur des Bodens verbessert. Ziel ist eine stabile Grasnarbe, eine bessere Wasserverfügbarkeit und eine nachhaltige Entwicklung der Spielfläche.' },
+                { q: 'Wie schnell sind Ergebnisse sichtbar?', a: 'Die Wirkung kann je nach Standort, Bodenstruktur, Klima und Nutzung variieren. In vielen Fällen sind erste Veränderungen der Grasvitalität und Farbintensität innerhalb weniger Wochen sichtbar. Langfristige Verbesserungen der Bodenstruktur entwickeln sich über mehrere Vegetationsperioden.' },
+                { q: 'Funktioniert das auch bei hoher Spielbelastung?', a: 'Das Pflegekonzept wurde speziell für Flächen entwickelt, die intensiver Nutzung ausgesetzt sind. Dazu gehören beispielsweise: Sportanlagen, Trainingsplätze, Golfanlagen. Eine stabile Grasnarbe und eine gesunde Wurzelentwicklung sind zentrale Ziele des Konzepts.' },
+                { q: 'Ist das Pflegekonzept für Golfplätze geeignet?', a: 'Ja, das Pflegekonzept kann grundsätzlich auch auf Golfanlagen angewendet werden. Dabei wird die Anwendung individuell an Bodenbedingungen, Klima und Pflegeplan angepasst.' },
+                { q: 'Wie erfolgt die Anwendung?', a: 'Die Anwendung erfolgt in der Regel im Rahmen eines strukturierten Pflegeplans. Dieser kann unter anderem beinhalten: Blattapplikationen, Bodenapplikationen, Kombination mit bestehenden Pflegemaßnahmen. Die konkrete Umsetzung hängt immer von der jeweiligen Anlage ab.' }
+            ],
+            legal: 'Alle dargestellten Informationen dienen der allgemeinen Beschreibung eines Pflegekonzepts. Ergebnisse können je nach Standort, Klima, Bodenstruktur, Nutzung und Pflegeplan variieren.'
         },
         contact: {
             eyebrow: 'Kontakt',
-            title: 'Lassen Sie sich von unseren',
-            titleHighlight: 'Experten beraten',
-            desc: 'Unser Team unterstützt Sie bei der Auswahl der richtigen Produkte für Ihre spezifischen Anforderungen. Vereinbaren Sie ein unverbindliches Beratungsgespräch.',
+            title: 'Vertrauen durch',
+            titleHighlight: 'Erfahrung',
+            desc: 'Unser Pflegekonzept wurde aus praktischen Erfahrungen im professionellen Sportrasenbereich entwickelt und orientiert sich an den Anforderungen moderner Sportanlagen und Golfplätze.',
+            trustItems: [
+                'Praxisorientierter Ansatz',
+                'Strukturierte Pflegeplanung',
+                'Nachhaltige Bodenentwicklung',
+                'Unterstützung professioneller Greenkeeper'
+            ],
+            contactText: 'Wenn Sie mehr über unser Pflegekonzept erfahren möchten, stellen wir Ihnen gerne weitere Informationen zur Verfügung. Gemeinsam können wir besprechen, welche Ansätze für Ihre Anlage sinnvoll sein könnten.',
+            legal: 'Die dargestellten Inhalte basieren auf praktischen Erfahrungen aus dem professionellen Sportrasenbereich. Ergebnisse können je nach Standort, Klima, Bodenstruktur, Nutzung und Pflegeplan variieren.',
             labels: { name: 'Name *', email: 'E-Mail *', company: 'Unternehmen / Einrichtung', type: 'Interessenbereich *', message: 'Nachricht *', address: 'Adresse' },
             placeholders: { name: 'Ihr vollständiger Name', email: 'ihre.email@beispiel.com', company: 'z.B. Golfclub, Stadion, etc.', message: 'Beschreiben Sie Ihre Anforderungen...' },
             options: { sport: 'Sportrasen', golf: 'Golfrasen', both: 'Beides' },
-            btn: 'Nachricht senden',
+            btn: 'Beratung anfragen',
             sending: 'Wird gesendet...',
             success: { title: 'Nachricht gesendet!', desc: 'Wir melden uns schnellstmöglich bei Ihnen.' }
+        },
+        comparison: {
+            eyebrow: 'DER UNTERSCHIED',
+            title: 'Natürliche Rasenpflege vs.',
+            titleHighlight: 'Chemische Dünger',
+            subtitle: 'Der Unterschied, der zählt – für Ihren Rasen und die Umwelt',
+            natural: {
+                badge: '4ELEMENTRA',
+                title: 'Natürliche Rasenpflege',
+                items: [
+                    'Schnelle Verfügbarkeit der Nährstoffe',
+                    'Bindet Nährstoffe (keine Auschwemmungen)',
+                    'Speichert Wasser (geringerer Wasserbedarf)',
+                    'Wurzelmasse wird gebildet',
+                    'Gesundheitlich unbedenklich (reine Naturprodukte)',
+                    'Widerstandsfähig gegen abiotischen Stress',
+                    'Hohe Scherfestigkeit',
+                    'Verbesserung der Bodenstruktur',
+                    'Aktiviert Stoffkreislauf'
+                ]
+            },
+            chemical: {
+                badge: 'KONVENTIONELL',
+                title: 'Chemische Dünger',
+                items: [
+                    'Nimmt Nährstoffe auf Dauer nicht mehr auf',
+                    'Wasserdurchlässig (Grundwasserverunreinigung)',
+                    'Bildet wenig Wurzeln',
+                    'Gesundheitsschädlich (z.B. Hautausschlag)',
+                    'Abiotischer Stress nimmt zu',
+                    'Geringere Scherfestigkeit',
+                    'Bodenleben wird zerstört',
+                    'Boden wird auf Dauer versalzt',
+                    'Langfristig höhere Kosten durch Folgeschäden'
+                ]
+            },
+            cta: 'Kontakt aufnehmen'
+        },
+        process: {
+            eyebrow: 'System',
+            title: '3-Schritte',
+            titleHighlight: 'Pflegekonzept',
+            items: [
+                {
+                    title: 'Analyse der Rasensituation',
+                    desc: 'Berücksichtigung von Bodenstruktur, Nutzung, Klima und bisheriger Pflege.'
+                },
+                {
+                    title: 'Strukturierte Pflegeplanung',
+                    desc: 'Saisonale Planung der Anwendungen und Anpassung an Spiel- und Trainingsbelastung.'
+                },
+                {
+                    title: 'Kontinuierliche Anwendung',
+                    desc: 'Umsetzung des Pflegekonzepts über die gesamte Saison mit Fokus auf stabile Spielflächen.'
+                }
+            ]
+        },
+        programs: {
+            eyebrow: 'Saisonal',
+            title: 'Anwendungs',
+            titleHighlight: 'programme',
+            items: [
+                {
+                    name: 'Frühjahrsprogramm',
+                    desc: 'Aktivierung der Vegetation und Unterstützung der Wurzelentwicklung.'
+                },
+                {
+                    name: 'Wachstumsphase',
+                    desc: 'Stabilisierung der Spielfläche und kontinuierliche Nährstoffversorgung.'
+                },
+                {
+                    name: 'Stressphase',
+                    desc: 'Unterstützung der Stressresistenz bei hoher Nutzung oder klimatischen Belastungen.'
+                },
+                {
+                    name: 'Regenerationsphase',
+                    desc: 'Förderung der Regeneration nach intensiver Nutzung.'
+                },
+                {
+                    name: 'Herbstprogramm',
+                    desc: 'Vorbereitung der Rasennarbe auf die Winterperiode.'
+                }
+            ]
+        },
+        targetGroups: {
+            eyebrow: 'Einsatzbereiche',
+            title: 'Für wen das',
+            titleHighlight: 'Pflegekonzept geeignet ist',
+            items: [
+                { name: 'Stadien', image: '/images/targets/stadium.png' },
+                { name: 'Trainingszentren', image: '/images/targets/training.png' },
+                { name: 'Golfanlagen', image: '/images/targets/golf.jpg' },
+                { name: 'Sportanlagen', image: '/images/targets/sport.png' }
+            ]
         },
         footer: {
             tagline: '100% Natur – Premium organische Düngemittel für professionellen Sportrasen und Golfrasen.',
             headings: { nav: 'Navigation', contact: 'Kontakt', newsletter: 'Newsletter' },
             newsletterText: 'Erhalten Sie Updates zu neuen Produkten und Anwendungstipps.',
             newsletterPlaceholder: 'Ihre E-Mail-Adresse',
-            rights: 'Alle Rechte vorbehalten.'
+            rights: 'Alle Rechte vorbehalten.',
+            legal: 'Die dargestellten Inhalte basieren auf praktischen Erfahrungen aus dem professionellen Sportrasenbereich. Ergebnisse können je nach Standort, Klima, Bodenstruktur, Nutzung und Pflegeplan variieren.'
         }
     },
     en: {
@@ -253,69 +374,87 @@ export const translations = {
             cta: 'Request Consultation',
         },
         hero: {
+            title: 'Professional Turf Care',
+            titleHighlight: 'Begins in the Soil.',
+            subtitle: 'An organically oriented care concept for sports turf and golf courses – developed for high stress, stable playing surfaces and sustainable soil development.',
+            subline: 'Developed from practical experience in professional greenkeeping.',
+            pills: [
+                'Stadiums and Sports Facilities',
+                'Training Pitches',
+                'Golf Courses',
+                'Professional Sports Turf'
+            ],
             sport: {
-                badge: 'Sports Turf',
-                title: 'Bundesliga Quality.',
-                titleHighlight: '100% Organic.',
-                subtitle: 'Maximum durability for professional venues – 4 games in 6 days, uncompromisingly sustainable.',
-                cta: 'Sports Turf Solutions',
+                badge: 'Areas of Application',
+                cta: 'Learn more',
             },
-            divider: 'OR',
+            divider: 'AND',
             golf: {
                 badge: 'Golf Turf',
-                title: 'Perfect Playability.',
-                titleHighlight: 'Naturally Achieved.',
-                subtitle: 'Consistent greens, perfect ball roll, and long-term soil health for demanding golf courses.',
-                cta: 'Golf Turf Solutions',
+                cta: 'Request a consultation',
             },
-            stats: {
-                years: 'Years Chemical-Free',
-                organic: 'Organic',
-                quality: 'Quality',
-                chemistry: 'Chemicals',
-            },
+            trustPoints: [
+                'structured care concept',
+                'practice-oriented applications',
+                'sustainable soil development'
+            ],
             scroll: 'Discover More'
         },
         philosophy: {
-            eyebrow: 'Our Philosophy',
-            title: 'The Power of the',
-            titleHighlight: 'Four Elements',
-            subtitle: '4ELEMENTRA is based on the timeless balance of the four elements. We use natural cycles instead of chemical interventions – for results that convince.',
+            eyebrow: 'Philosophy',
+            title: 'The quality of a playing surface is created by the',
+            titleHighlight: 'interaction of soil, plant and care.',
+            subtitle: 'Our approach is based on three basic principles:',
             elements: {
-                earth: { name: 'Earth', desc: 'Organic base, nutrient storage, and structural stability for healthy root growth.' },
-                water: { name: 'Water', desc: 'Essence of life and transport of active ingredients directly into plant fibers – for optimal supply.' },
-                air: { name: 'Air', desc: 'Circulation in the soil and root respiration – essential for living, active soil.' },
-                energy: { name: 'Energy', desc: 'The inner primal force – symbolized by Magenta. Drive for metabolism and regeneration.' }
+                soil: {
+                    name: 'Understand the Soil',
+                    desc: 'Active soil life and stable soil structure form the basis for resilient playing surfaces.'
+                },
+                plant: {
+                    name: 'Support the Plant',
+                    desc: 'A balanced nutrient supply supports growth, regeneration and stress resistance.'
+                },
+                maintenance: {
+                    name: 'Structure the Care',
+                    desc: 'A stable maintenance plan can be implemented through coordinated applications.'
+                }
             },
-            quote: '"100% Nature – Not only possible, but',
-            quoteHighlight: 'more successful than conventional methods."',
-            quoteSub: 'Return to roots. Holistic solutions instead of isolated agents. Proven effectiveness in professional environments.'
+            quote: '"After a long period of application, it is clear that an organically oriented maintenance concept can also be practicable under professional conditions."',
+            quoteHighlight: 'Head of Turf Care (Anonymized)',
+            quoteSub: 'Practical example from the professional sports turf sector.'
         },
         casestudy: {
             eyebrow: 'Case Study',
-            title: 'Bundesliga Arena: Organic Turf Care',
-            titleHighlight: 'at the Highest Level',
-            desc: 'For over two years, we have been maintaining an Austrian Bundesliga stadium exclusively with organic fertilizers – under extreme stress with multiple games per week.',
-            stats: {
-                games: 'Games in 6 Days',
-                years: 'Years Chemical-Free',
-                residues: 'Chemical Residues'
-            },
-            quote: '"After several years of consistent, sustainable care, I can say: It works – and better than anything I have experienced with chemicals."',
-            role: 'Head of Grounds',
-            badges: ['Extreme Durability', 'Fast Regeneration', 'Sustainable Method']
+            title: 'Organic Turf Care',
+            titleHighlight: 'under high stress',
+            desc: 'For over a year, a professional sports turf site has been maintained exclusively with an organically oriented care concept. The site is regularly exposed to intensive use, with several games within short periods of time. Despite this stress, there is a stable sward, rapid regeneration, and a sustainable development of the soil structure.',
+            stats: [
+                { value: '> 1', suffix: '', label: 'Year of Application' },
+                { value: '✓', suffix: '', label: 'Multiple Games/Week' },
+                { value: '100', suffix: '%', label: 'Organic Concept' },
+                { value: '0', suffix: '', label: 'Chemical Residues' }
+            ],
+            quote: '"Despite regular intensive use with multiple games within short periods, there is a stable turf, rapid regeneration, and sustainable development of the soil structure."',
+            role: 'Professional Sports Turf Site',
+            badges: [
+                'High Durability',
+                'Fast Regeneration',
+                'Sustainable Soil Development',
+                'Reduction of Chemical Loads'
+            ],
+            legal: 'The experiences presented are based on practical applications in professional sports turf environments. Results may vary depending on location, climate, soil structure, use, and maintenance plan.'
         },
         benefits: {
-            eyebrow: 'Benefits',
+            eyebrow: 'Advantages',
             title: 'Why',
-            subtitle: 'Organic efficiency meets professional requirements – with measurable benefits for your turf and your budget.',
+            subtitle: 'A structured care concept helps to support the quality and stability of sports turf surfaces in the long term.',
             items: [
-                { title: 'Extreme Durability', desc: 'Proven performance under the toughest conditions – 4 games in 6 days, without loss of quality.' },
-                { title: 'Fast Regeneration', desc: 'Natural activation of self-healing powers for quick recovery after stress.' },
-                { title: 'Cost Savings', desc: 'Less fertilizer, less labor, lower operating costs with better results.' },
-                { title: 'Sustainability', desc: 'Environmental protection without compromise. Good for the soil, good for the ecosystem.' },
-                { title: 'No Chemicals', desc: '100% organic, no residues – safe playing surfaces for athletes and visitors.' },
-                { title: 'Long-term Soil Health', desc: 'Building living soil instead of short-term symptom treatment.' }
+                { title: 'Resilience', desc: 'Support for stable turf swards for high play loads.' },
+                { title: 'Regeneration', desc: 'Promoting the natural regenerative power of the grasses.' },
+                { title: 'Efficiency', desc: 'Planable care processes through a structured system.' },
+                { title: 'Sustainability', desc: 'Sustainable soil development through an organically oriented approach.' },
+                { title: 'Soil Health', desc: 'Promoting active soil life and stable structures.' },
+                { title: 'Structured Care', desc: 'Structured nutrient supply throughout the entire season.' }
             ]
         },
         products: {
@@ -429,20 +568,20 @@ export const translations = {
                     composition: 'NPK 5-5-15 + Silicon + Seaweed extracts.',
                     specifications: 'Special product for high-performance turf.'
                 }
-            }
+            },
+            legal: 'Product information serves as a general description of the care concept. Application, dosage, and results may vary depending on location, climate, soil structure, and use.'
         },
         ice: {
             eyebrow: 'Technology',
             title: 'I.C.E. Technology:',
-            titleHighlight: 'The Future of Turf Care',
-            desc: 'Intercellular Cytoplasmic Exchange – our patented technology allows direct uptake of nutrients into plant cells without losses through conventional soil processes.',
+            titleHighlight: 'Plant Physiological Approach',
+            desc: 'The term I.C.E. describes a plant physiological approach to providing nutrients in a form that can be used effectively by the plant.',
             features: [
-                { title: 'Intercellular Transport', desc: 'Nutrients are transported directly between cells, bypassing the root system.' },
-                { title: 'Cytoplasmic Exchange', desc: 'Natural uptake into the cell plasma for maximum bioavailability.' },
-                { title: 'Immediate Effect', desc: 'Faster nutrient supply than with conventional soil fertilizers.' },
-                { title: '100% Uptake', desc: 'No losses due to leaching or fixation in the soil.' }
+                { title: 'Nutrient Availability', desc: 'Optimized provision of nutrients for direct uptake.' },
+                { title: 'Metabolic Processes', desc: 'Support of natural plant metabolic processes.' },
+                { title: 'Practice-Oriented', desc: 'Developed for application in the professional sports turf sector.' }
             ],
-            diagram: { label1: 'Cellular Uptake', label2: '4ELEMENTRA Nutrients' },
+            diagram: { label1: 'Cellular Uptake', label2: 'I.C.E. Nutrients' },
             stats: { absorption: 'Higher Absorption', speed: 'Faster Effect', loss: 'Leaching Losses' }
         },
         faq: {
@@ -453,32 +592,135 @@ export const translations = {
             ctaText: 'Do you have more questions?',
             cta: 'Contact Us',
             items: [
-                { q: 'Why organic fertilizers instead of chemicals?', a: 'Organic fertilizers work with nature, not against it. They promote healthy soil life, improve soil structure long-term, and leave no harmful residues. Our experience in the Bundesliga stadium shows: Organic achieves not only the same but even better results than chemical methods – at lower total costs.' },
-                { q: 'How quickly will I see results?', a: 'Thanks to our I.C.E. Technology, first effects are often visible after 24-48 hours. For sustainable results, we recommend consistent application over at least one season.' },
-                { q: 'Does it work under extreme stress?', a: 'Absolutely. Our most famous reference project is an Austrian Bundesliga stadium with up to 4 games in 6 days. For over 2 years, the turf has been maintained exclusively organically – with excellent results.' },
-                { q: 'Which products are suitable for my situation?', a: 'That depends on several factors. We offer a free initial consultation to develop a tailor-made product combination for your requirements.' },
-                { q: 'How is the application carried out?', a: 'Our products are usually applied as foliar fertilizers. The application is straightforward and requires no special equipment. We provide detailed application recommendations for each product.' },
-                { q: 'Are the products suitable for golf courses?', a: 'Yes, we have developed specific product lines for golf turf, taking into account the special requirements of greens, fairways, and tees.' }
-            ]
+                { q: 'Why an organically oriented care concept?', a: 'An organically oriented care concept supports natural soil development in the long term. In contrast to purely chemical approaches, soil life is actively supported and the structure of the soil is improved. The goal is a stable sward, better water availability and sustainable development of the playing surface.' },
+                { q: 'How quickly are results visible?', a: 'The effect can vary depending on location, soil structure, climate and use. In many cases, initial changes in grass vitality and color intensity are visible within a few weeks. Long-term improvements in soil structure develop over several vegetation periods.' },
+                { q: 'Does this also work with high game load?', a: 'The care concept was specially developed for areas that are exposed to intensive use. These include, for example: sports facilities, training pitches, golf courses. A stable turf and healthy root development are central goals of the concept.' },
+                { q: 'Is the care concept suitable for golf courses?', a: 'Yes, the care concept can basically also be applied to golf courses. The application is individually adapted to soil conditions, climate and maintenance plan.' },
+                { q: 'How is the application carried out?', a: 'The application usually takes place within a structured maintenance plan. This can include, among other things: foliar applications, soil applications, combination with existing maintenance measures. The specific implementation always depends on the respective facility.' }
+            ],
+            legal: 'All information presented serves as a general description of a care concept. Results may vary depending on location, climate, soil structure, use, and maintenance plan.'
         },
         contact: {
             eyebrow: 'Contact',
-            title: 'Get Advice from our',
-            titleHighlight: 'Experts',
-            desc: 'Our team supports you in choosing the right products for your specific requirements. Arrange a non-binding consultation.',
+            title: 'Trust through',
+            titleHighlight: 'Experience',
+            desc: 'Our care concept was developed from practical experience in the professional sports turf sector and is geared towards the requirements of modern sports facilities and golf courses.',
+            trustItems: [
+                'Practice-oriented approach',
+                'Structured care planning',
+                'Sustainable soil development',
+                'Support for professional greenkeepers'
+            ],
+            contactText: 'If you would like to find out more about our care concept, we would be happy to provide you with further information. Together we can discuss which approaches could make sense for your facility.',
+            legal: 'The content presented is based on practical experience from the professional sports turf sector. Results may vary depending on location, climate, soil structure, use, and maintenance plan.',
             labels: { name: 'Name *', email: 'Email *', company: 'Company / Institution', type: 'Area of Interest *', message: 'Message *', address: 'Address' },
             placeholders: { name: 'Your full name', email: 'your.email@example.com', company: 'e.g., Golf Club, Stadium, etc.', message: 'Describe your requirements...' },
             options: { sport: 'Sports Turf', golf: 'Golf Turf', both: 'Both' },
-            btn: 'Send Message',
+            btn: 'Request Consultation',
             sending: 'Sending...',
             success: { title: 'Message Sent!', desc: 'We will get back to you as soon as possible.' }
+        },
+        comparison: {
+            eyebrow: 'THE DIFFERENCE',
+            title: 'Natural Turf Care vs.',
+            titleHighlight: 'Chemical Fertilizers',
+            subtitle: 'The difference that counts – for your turf and the environment',
+            natural: {
+                badge: '4ELEMENTRA',
+                title: 'Natural Turf Care',
+                items: [
+                    'Fast availability of nutrients',
+                    'Binds nutrients (no leaching)',
+                    'Stores water (lower water requirement)',
+                    'Root mass is formed',
+                    'Harmless to health (pure natural products)',
+                    'Resistant to abiotic stress',
+                    'High shear strength',
+                    'Improvement of soil structure',
+                    'Activates nutrient cycle'
+                ]
+            },
+            chemical: {
+                badge: 'CONVENTIONAL',
+                title: 'Chemical Fertilizers',
+                items: [
+                    'Does not absorb nutrients in the long run',
+                    'Water permeable (groundwater contamination)',
+                    'Forms few roots',
+                    'Harmful to health (e.g., skin rash)',
+                    'Abiotic stress increases',
+                    'Lower shear strength',
+                    'Soil life is destroyed',
+                    'Soil becomes saline over time',
+                    'Longterm higher costs due to consequential damage'
+                ]
+            },
+            cta: 'Get in Touch'
+        },
+        process: {
+            eyebrow: 'System',
+            title: '3-Step',
+            titleHighlight: 'Care Concept',
+            items: [
+                {
+                    title: 'Analysis of the Turf Situation',
+                    desc: 'Consideration of soil structure, use, climate, and previous care.'
+                },
+                {
+                    title: 'Structured Care Planning',
+                    desc: 'Seasonal planning of applications and adaptation to game and training loads.'
+                },
+                {
+                    title: 'Continuous Application',
+                    desc: 'Implementation of the care concept throughout the season with a focus on stable playing surfaces.'
+                }
+            ]
+        },
+        programs: {
+            eyebrow: 'Seasonal',
+            title: 'Application',
+            titleHighlight: 'Programs',
+            items: [
+                {
+                    name: 'Spring Program',
+                    desc: 'Activation of vegetation and support for root development.'
+                },
+                {
+                    name: 'Growth Phase',
+                    desc: 'Stabilization of the playing surface and continuous nutrient supply.'
+                },
+                {
+                    name: 'Stress Phase',
+                    desc: 'Support for stress resistance during high use or climatic stress.'
+                },
+                {
+                    name: 'Regeneration Phase',
+                    desc: 'Promotion of regeneration after intensive use.'
+                },
+                {
+                    name: 'Autumn Program',
+                    desc: 'Preparation of the turf sward for the winter period.'
+                }
+            ]
+        },
+        targetGroups: {
+            eyebrow: 'Applications',
+            title: 'Who the',
+            titleHighlight: 'Care Concept is suitable for',
+            items: [
+                { name: 'Stadiums', image: '/images/targets/stadium.png' },
+                { name: 'Training Centers', image: '/images/targets/training.png' },
+                { name: 'Golf Courses', image: '/images/targets/golf.jpg' },
+                { name: 'Sports Facilities', image: '/images/targets/sport.png' }
+            ]
         },
         footer: {
             tagline: '100% Nature – Premium organic fertilizers for professional sports turf and golf turf.',
             headings: { nav: 'Navigation', contact: 'Contact', newsletter: 'Newsletter' },
             newsletterText: 'Receive updates on new products and application tips.',
             newsletterPlaceholder: 'Your email address',
-            rights: 'All rights reserved.'
+            rights: 'All rights reserved.',
+            legal: 'The content presented is based on practical experience from the professional sports turf sector. Results may vary depending on location, climate, soil structure, use, and maintenance plan.'
         }
     }
 };

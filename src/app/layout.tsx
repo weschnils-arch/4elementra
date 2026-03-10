@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "4ELEMENTRA | Premium Organic Turf Care",
-  description: "100% Natur – Organische Düngemittel für professionellen Sportrasen und Golfrasen. Bewährte Ergebnisse auf Bundesliga-Niveau.",
+  description: "100% Natur – Organische Düngemittel für professionellen Sportrasen und Golfrasen. Bewährte Ergebnisse im professionellen Greenkeeping.",
   keywords: "4ELEMENTRA, organische Düngemittel, Rasenbetreuung, Golfrasen, Sportrasen, Greenkeeper, nachhaltige Rasenpflege",
   authors: [{ name: "4ELEMENTRA" }],
   icons: {

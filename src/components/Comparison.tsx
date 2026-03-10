@@ -8,40 +8,19 @@ import styles from './Comparison.module.css';
 const Comparison: React.FC = () => {
     const { t } = useLanguage();
 
-    const naturalBenefits = [
-        'Schnelle Verfügbarkeit der Nährstoffe',
-        'Bindet Nährstoffe (keine Auschwemmungen)',
-        'Speichert Wasser (geringerer Wasserbedarf)',
-        'Wurzelmasse wird gebildet',
-        'Gesundheitlich unbedenklich (reine Naturprodukte)',
-        'Widerstandsfähig gegen abiotischen Stress',
-        'Hohe Scherfestigkeit',
-        'Verbesserung der Bodenstruktur',
-        'Aktiviert Stoffkreislauf'
-    ];
-
-    const chemicalDrawbacks = [
-        'Nimmt Nährstoffe auf Dauer nicht mehr auf',
-        'Wasserdurchlässig (Grundwasserverunreinigung)',
-        'Bildet wenig Wurzeln',
-        'Gesundheitsschädlich (z.B. Hautausschlag)',
-        'Abiotischer Stress nimmt zu',
-        'Geringere Scherfestigkeit',
-        'Bodenleben wird zerstört',
-        'Boden wird auf Dauer versalzt',
-        'Langfristig höhere Kosten durch Folgeschäden'
-    ];
+    const naturalBenefits = t.comparison.natural.items;
+    const chemicalDrawbacks = t.comparison.chemical.items;
 
     return (
         <section id="vergleich" className={`section ${styles.comparison}`}>
             <div className="container">
                 <div className={styles.header}>
-                    <span className={styles.eyebrow}>DER UNTERSCHIED</span>
+                    <span className={styles.eyebrow}>{t.comparison.eyebrow}</span>
                     <h2 className={styles.title}>
-                        Natürliche Rasenpflege vs. <span className={styles.highlight}>Chemische Dünger</span>
+                        {t.comparison.title} <span className={styles.highlight}>{t.comparison.titleHighlight}</span>
                     </h2>
                     <p className={styles.subtitle}>
-                        Der Unterschied, der zählt – für Ihren Rasen und die Umwelt
+                        {t.comparison.subtitle}
                     </p>
                 </div>
 
@@ -49,14 +28,14 @@ const Comparison: React.FC = () => {
                     {/* Natural Column */}
                     <div className={`${styles.column} ${styles.columnNatural}`}>
                         <div className={styles.columnHeader}>
-                            <span className={styles.badge}>4ELEMENTRA</span>
-                            <h3 className={styles.columnTitle}>Natürliche Rasenpflege</h3>
+                            <span className={styles.badge}>{t.comparison.natural.badge}</span>
+                            <h3 className={styles.columnTitle}>{t.comparison.natural.title}</h3>
                         </div>
 
                         <div className={styles.imageWrapper}>
                             <Image
                                 src="/images/comparison-natural.jpg"
-                                alt="Gesunder Boden mit natürlicher Pflege"
+                                alt={t.comparison.natural.title}
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
@@ -64,7 +43,7 @@ const Comparison: React.FC = () => {
                         </div>
 
                         <ul className={styles.benefitsList}>
-                            {naturalBenefits.map((benefit, index) => (
+                            {naturalBenefits.map((benefit: string, index: number) => (
                                 <li key={index} className={styles.benefitItem}>
                                     <span className={styles.checkIcon}>
                                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -80,14 +59,14 @@ const Comparison: React.FC = () => {
                     {/* Chemical Column */}
                     <div className={`${styles.column} ${styles.columnChemical}`}>
                         <div className={styles.columnHeader}>
-                            <span className={`${styles.badge} ${styles.badgeChemical}`}>KONVENTIONELL</span>
-                            <h3 className={styles.columnTitle}>Chemische Dünger</h3>
+                            <span className={`${styles.badge} ${styles.badgeChemical}`}>{t.comparison.chemical.badge}</span>
+                            <h3 className={styles.columnTitle}>{t.comparison.chemical.title}</h3>
                         </div>
 
                         <div className={styles.imageWrapper}>
                             <Image
                                 src="/images/comparison-chemical.jpg"
-                                alt="Verdichteter Boden durch chemische Behandlung"
+                                alt={t.comparison.chemical.title}
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
@@ -95,7 +74,7 @@ const Comparison: React.FC = () => {
                         </div>
 
                         <ul className={styles.drawbacksList}>
-                            {chemicalDrawbacks.map((drawback, index) => (
+                            {chemicalDrawbacks.map((drawback: string, index: number) => (
                                 <li key={index} className={styles.drawbackItem}>
                                     <span className={styles.crossIcon}>
                                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -113,7 +92,7 @@ const Comparison: React.FC = () => {
                 {/* CTA Section */}
                 <div className={styles.ctaSection}>
                     <a href="#kontakt" className={`btn btn-primary btn-lg ${styles.ctaButton}`}>
-                        Kontakt aufnehmen
+                        {t.comparison.cta}
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>

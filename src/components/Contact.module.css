@@ -109,6 +109,56 @@
     color: var(--magenta);
 }
 
+/* Trust Elements */
+.trustElements {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.0625rem;
+    color: var(--anthracite);
+    font-weight: 500;
+}
+
+.trustIcon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(226, 0, 116, 0.1);
+    color: var(--magenta);
+    border-radius: 50%;
+}
+
+.contactText {
+    font-size: 1.0625rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* Legal Notice */
+.legalNotice {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.legalNotice p {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
+}
+
 /* Form Styles */
 .formWrapper {
     background: var(--off-white);

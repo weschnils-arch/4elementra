@@ -1,0 +1,127 @@
+.process {
+    background: var(--white);
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 80px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--magenta);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--anthracite);
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--magenta), var(--magenta-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+}
+
+.stepCard {
+    position: relative;
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--off-white);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-medium);
+}
+
+.stepCard:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.iconWrapper {
+    width: 100px;
+    height: 100px;
+    background: var(--white);
+    border-radius: 50%;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--magenta);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.stepNumber {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 32px;
+    height: 32px;
+    background: var(--magenta);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: 3px solid var(--white);
+}
+
+.stepTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--anthracite);
+    margin-bottom: 16px;
+}
+
+.stepDesc {
+    font-size: 0.9375rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.connector {
+    position: absolute;
+    top: 50px;
+    right: -32px;
+    color: var(--gray-light);
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .stepsGrid {
+        gap: 24px;
+    }
+
+    .connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .stepsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .stepCard {
+        padding: 32px 20px;
+    }
+}

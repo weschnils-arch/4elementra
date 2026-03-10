@@ -303,6 +303,21 @@
     padding-top: 16px;
 }
 
+/* Legal Notice */
+.legalNotice {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.legalNotice p {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
+}
+
+/* Navigation Utilities */
 .backNav {
     position: absolute;
     top: 16px;

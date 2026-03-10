@@ -87,6 +87,10 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
+                <div className={styles.legalNotice}>
+                    {t.footer.legal}
+                </div>
+
                 <div className={styles.bottom}>
                     <div className={styles.copyright}>
                         © {currentYear} 4ELEMENTRA. {t.footer.rights}

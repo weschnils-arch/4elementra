@@ -9,48 +9,42 @@ const Philosophy: React.FC = () => {
 
     const elements = [
         {
-            name: t.philosophy.elements.earth.name,
+            name: t.philosophy.elements.soil.name,
             icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="2" fill="none" />
-                    <path d="M12 32C14 28 18 26 24 26C30 26 34 28 36 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M24 26V16M20 20L24 16L28 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 10v4" />
+                    <path d="M12 18v4" />
+                    <path d="M12 2v4" />
+                    <path d="M22 12h-4" />
+                    <path d="M6 12H2" />
+                    <circle cx="12" cy="12" r="7" />
                 </svg>
             ),
-            description: t.philosophy.elements.earth.desc,
+            description: t.philosophy.elements.soil.desc,
             color: '#8B4513'
         },
         {
-            name: t.philosophy.elements.water.name,
+            name: t.philosophy.elements.plant.name,
             icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 8C24 8 12 20 12 28C12 34.6274 17.3726 40 24 40C30.6274 40 36 34.6274 36 28C36 20 24 8 24 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                    <path d="M20 28C20 30.2091 21.7909 32 24 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M11 20a7 7 0 0 1-7-7c0-3.87 3.13-7 7-7 2.1 0 3.97 1 5.2 2.53a7.51 7.51 0 0 1 3.8 6.47c0 4.14-3.36 7.5-7.5 7.5-1.5 0-2.88-.44-4.04-1.2A7.51 7.51 0 0 0 11 20z" />
+                    <path d="M11 13V22" />
                 </svg>
             ),
-            description: t.philosophy.elements.water.desc,
-            color: '#1E90FF'
+            description: t.philosophy.elements.plant.desc,
+            color: '#228B22'
         },
         {
-            name: t.philosophy.elements.air.name,
+            name: t.philosophy.elements.maintenance.name,
             icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 20H28C31.3137 20 34 17.3137 34 14C34 10.6863 31.3137 8 28 8C25.8 8 23.9 9.2 22.8 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M8 28H36C39.3137 28 42 30.6863 42 34C42 37.3137 39.3137 40 36 40C33.2 40 30.8 38.2 30 35.6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M8 36H16C18.2091 36 20 34.2091 20 32C20 29.7909 18.2091 28 16 28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
                 </svg>
             ),
-            description: t.philosophy.elements.air.desc,
-            color: '#87CEEB'
-        },
-        {
-            name: t.philosophy.elements.energy.name,
-            icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 6L28 20H38L30 30L34 44L24 34L14 44L18 30L10 20H20L24 6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                </svg>
-            ),
-            description: t.philosophy.elements.energy.desc,
+            description: t.philosophy.elements.maintenance.desc,
             color: '#E20074'
         }
     ];
