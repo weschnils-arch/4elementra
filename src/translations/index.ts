@@ -348,7 +348,7 @@ export const translations = {
             items: [
                 { name: 'Stadien', image: '/images/targets/stadium.png' },
                 { name: 'Trainingszentren', image: '/images/targets/training.png' },
-                { name: 'Golfanlagen', image: '/images/targets/golf.jpg' },
+                { name: 'Golfanlagen', image: '/images/targets/golf.png' },
                 { name: 'Sportanlagen', image: '/images/targets/sport.png' }
             ]
         },
@@ -710,7 +710,7 @@ export const translations = {
             items: [
                 { name: 'Stadiums', image: '/images/targets/stadium.png' },
                 { name: 'Training Centers', image: '/images/targets/training.png' },
-                { name: 'Golf Courses', image: '/images/targets/golf.jpg' },
+                { name: 'Golf Courses', image: '/images/targets/golf.png' },
                 { name: 'Sports Facilities', image: '/images/targets/sport.png' }
             ]
         },
